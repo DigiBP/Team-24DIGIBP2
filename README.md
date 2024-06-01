@@ -305,18 +305,14 @@ Description: The process initiates with a custom webhook that triggers the creat
 
 <img width="1433" alt="Invoice Template Records google" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/f2288d3b-7516-4229-966e-3c0b4ac6bf31">
 
-Description: Once the invoice is generated, it is stored in a specific Google Drive folder dedicated to invoice records, allowing easy access and management.
-
-
-
+Description: The invoice generation process begins with a custom webhook that triggers the automated creation of an invoice from a predefined template in Google Sheets. This approach ensures that every invoice adheres to the company's standards for uniformity and accuracy, laying the groundwork for reliable financial documentation.
 
 **Step 3:** Notify Accounts Department
 
 <img width="1351" alt="Notify accounts department make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/fe4960c6-ef52-4cab-a0bb-fe85146911ca">
 
 
-Description: After the invoice generation, the accounts department is automatically notified. This step involves downloading the invoice file from Google Drive, sending an email to the accounts department, and confirming the action with a webhook response.
-
+Description: Following the generation of the invoice, the accounts department is automatically notified. This notification process involves downloading the invoice from Google Drive, sending an email to the accounts department, and confirming the notification with a webhook response, ensuring that the accounts team can immediately start their review and processing tasks.
 
 
 
@@ -328,7 +324,7 @@ Description: After the invoice generation, the accounts department is automatica
 
 
 
-Description: Based on the outcome (success or error), processed timesheets are moved to either an internal folder for successful transactions or an error folder for those requiring further attention.
+Description: Based on the outcome of the invoice validation—successful or erroneous—the corresponding timesheets are moved to either an internal folder for successful transactions or an error folder for those needing further review. This automatic sorting helps in segregating and prioritizing tasks for rectification or further processing.
 
 
 
@@ -339,8 +335,7 @@ Description: Based on the outcome (success or error), processed timesheets are m
 <img width="1325" alt="Load Invoices" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2d3422cf-ebf3-4a07-b81f-81d8ca7f4896">
 
 
-Description: Invoices are loaded and reviewed periodically to ensure they meet all required standards and specifications.
-
+Description: Invoices are periodically loaded and reviewed to ensure they meet all required standards and specifications. This regular audit and quality check help in maintaining compliance and accuracy in the financial documentation, safeguarding against potential financial discrepancies or errors.
 
 
 
@@ -353,7 +348,7 @@ Description: Invoices are loaded and reviewed periodically to ensure they meet a
 
 
 
-Description: For invoices ready for payment, a bank transfer is prepared, and the invoice is sent to the client. This includes generating necessary documentation and using email for communication.
+Description: Once an invoice is ready for payment, the process to prepare bank transfers is initiated, and the invoice is sent to the client. This step ensures that financial transactions are prepared accurately, and clients receive their bills in a timely manner, enhancing both cash flow management and customer satisfaction.
 
 
 
@@ -367,8 +362,7 @@ Description: For invoices ready for payment, a bank transfer is prepared, and th
 <img width="1325" alt="Update Invoice Records" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7b280f86-0f17-49df-bd02-f3a2bcaf1f7b">
 
 
-Description: Once the invoice processing is confirmed successful, the relevant documents are moved to a processed folder, and the invoice records in Google Sheets are updated accordingly.
-
+Description: Upon successful processing, invoices are moved to a 'processed' folder, indicating the completion of their lifecycle. Simultaneously, invoice records in Google Sheets are updated to reflect their current status. This final step ensures that all invoice data is up-to-date and accurately reflected in financial reports and audits
 
 
 
