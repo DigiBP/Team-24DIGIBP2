@@ -264,8 +264,10 @@ Move Processed Timesheets: After all validations and allocations are confirmed, 
 
 **Step 7:** Integration and Accessibility
 
+<img width="467" alt="Generated taks form" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/bc30b734-523a-4741-9d58-765dfffd6b59">
+<img width="485" alt="Google sheet form" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/687eb7ca-4032-4ca6-842d-c38fb1e0c5e4">
 
-(INCLUDE IMAGES OF GOOGLE MAKE DETAILS)
+
 
 Accessibility: All processed timesheets in the Google Drive folder are now easily accessible for further review, audit, or archival purposes. This final step ensures that the data is not only processed correctly but also stored in a way that supports easy retrieval and compliance with data management practices.
 
