@@ -281,5 +281,114 @@ This TO-BE process for Timesheet Management streamlines the entire cycle from cr
 
 
 
+# Process 2:  Invoice Generation Process
+
+Camunda Model for Invoice Generation
+
+<img width="774" alt="To-BE Invoice Generation" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/dbd3975a-8903-4dac-9d6f-728875c22ca2">
+
+
+
+
+**Step 1:** Generate Invoice Record from Template
+
+
+Description: The process initiates with a custom webhook that triggers the creation of an invoice record. The invoice is generated from a predefined template in Google Sheets to ensure uniformity and accuracy.
+
+<img width="1339" alt="Generate invoice Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c4bad08c-a287-4317-ae01-3f48e674db25">
+
+
+
+
+
+**Step 2:** Store Invoice Records
+
+<img width="1433" alt="Invoice Template Records google" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/f2288d3b-7516-4229-966e-3c0b4ac6bf31">
+
+Description: Once the invoice is generated, it is stored in a specific Google Drive folder dedicated to invoice records, allowing easy access and management.
+
+
+
+
+**Step 3:** Notify Accounts Department
+
+<img width="1351" alt="Notify accounts department make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/fe4960c6-ef52-4cab-a0bb-fe85146911ca">
+
+
+Description: After the invoice generation, the accounts department is automatically notified. This step involves downloading the invoice file from Google Drive, sending an email to the accounts department, and confirming the action with a webhook response.
+
+
+
+
+
+**Step 4:** Move Processed Timesheets to Appropriate Folders
+
+<img width="1325" alt="move processed timesheet error" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d9409edf-ce29-4028-b491-491f1a1d06f8">
+<img width="1325" alt="move processed timesheet to internal folder" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/32c1648d-a71a-4c0a-8508-185def77eb83">
+
+
+
+Description: Based on the outcome (success or error), processed timesheets are moved to either an internal folder for successful transactions or an error folder for those requiring further attention.
+
+
+
+
+
+**Step 5:** Load and Review Invoices
+
+<img width="1325" alt="Load Invoices" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2d3422cf-ebf3-4a07-b81f-81d8ca7f4896">
+
+
+Description: Invoices are loaded and reviewed periodically to ensure they meet all required standards and specifications.
+
+
+
+
+
+**Step 6:** Prepare Bank Transfers and Client Communications
+
+<img width="1325" alt="Prepare Bank transfer" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/79f21ef1-1ca7-40b9-a2ef-ba6eaff4eb39">
+<img width="1325" alt="Send invoice to client" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a669758e-9dec-467d-9616-8e2cbf651a24">
+
+
+
+
+Description: For invoices ready for payment, a bank transfer is prepared, and the invoice is sent to the client. This includes generating necessary documentation and using email for communication.
+
+
+
+
+
+
+
+**Step 7:** Final Processing and Record Updates
+
+<img width="1325" alt="Move to processed folder(success)" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0bfd0090-d502-49af-8f6b-d1521597ea72">
+<img width="1325" alt="Update Invoice Records" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7b280f86-0f17-49df-bd02-f3a2bcaf1f7b">
+
+
+Description: Once the invoice processing is confirmed successful, the relevant documents are moved to a processed folder, and the invoice records in Google Sheets are updated accordingly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
