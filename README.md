@@ -132,6 +132,9 @@ The Invoice generation process is now taken over by the accountant and is trigge
 
  **PROCESS OVERVIEW:**
 
+
+
+
 There are 2 main processes:
 
 
@@ -142,7 +145,133 @@ There are 2 main processes:
 These two sets of processes—timesheet management and invoice generation—are designed to enhance operational efficiency at Nish Technologies. By deploying these processes in Camunda, the company ensures that each critical task within timesheet and invoice management is handled systematically, reducing errors, improving turnaround times, and enhancing overall financial and operational control.
 
 
+# Process 1: Timesheet Management Process
 
+
+
+Camunda Model for Timesheet:
+<img width="917" alt="TO-BE TimeSheet creation" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cb2bd969-a522-4b93-9a62-34e326805e86">
+
+
+
+
+
+
+
+
+
+**Step 1:** Create Timesheet Request
+
+
+
+<img width="850" alt="Create Timesheet Form" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1bb3a31f-5243-4ec3-bb31-4aee2cb61552">
+
+
+Form Submission: Employees start by filling out a digital form to create a timesheet request. This form captures essential details such as the employee name, title, and project ID. The form, managed through Camunda's user task interface, ensures that all necessary data is collected efficiently and accurately.
+
+
+
+
+
+
+
+
+
+
+**Step 2:** Automate Timesheet Creation
+
+
+
+<img width="1265" alt="Create Timesheet Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/135dab83-b0a6-4568-8fb8-3ea2550e2e20">
+
+
+
+Triggering Custom Webhook: Once the form is submitted, a custom webhook is triggered.
+Google Sheets Integration: The webhook initiates a process where a new timesheet is created from a predefined template in Google Sheets. This automation ensures that the timesheet format is consistent and standardized for all entries.
+Webhook Response: After the spreadsheet is created, a confirmation is sent back through another webhook, signaling the successful creation of the timesheet.
+
+
+
+
+
+
+
+**Step 3:** Load and Process Timesheets
+
+
+
+<img width="1312" alt="Load Timesheet Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/8b02c6cd-1fae-4ac2-9b91-85dee7b9f04a">
+
+
+Monthly Batch Processing: At the end of each month, another automated process is initiated via Make to load all timesheets for the current month. This involves searching for relevant files in Google Drive, followed by compiling and organizing the data using Google Sheets and other tools to aggregate and format the data appropriately.
+
+
+
+
+
+
+
+**Step 4:** Determine Project Details and Billability
+
+
+<img width="1312" alt="Get Project for timesheet" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/fdcd8223-6cde-4681-a995-879156c9c62e">
+<img width="732" alt="DMN Overview" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/bbb6f18b-b8a1-47c6-ba2c-d701242978de">
+<img width="882" alt="DMN Table 1" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d7ebbf8f-1fd6-445d-a464-c71ddb6305f4">
+<img width="1093" alt="DMN Table 2" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1474b244-c3ec-4da1-9fc6-d6ee9c819167">
+
+
+
+Fetching Project Details: Using a combination of Google Sheets and custom logic (e.g., webhooks and scripting), the process fetches detailed project information related to each timesheet. This includes determining the project's current status and its customer details.
+
+Decision Making Using DMN: Decision Model and Notation (DMN) tables are utilized to ascertain whether the project is billable based on its status and other characteristics. This helps in categorizing the timesheets into billable and non-billable.
+
+
+
+
+
+
+
+**Step 5:** Allocate to Employees
+
+
+<img width="1312" alt="Employee allocation make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a44f25a3-9710-4d2f-ad9d-f5313bd48c26">
+
+
+Employee Allocation: A specific process in Make checks the allocation of each employee to projects. This step ensures that timesheets are accurately associated with the right employee and project, which is crucial for accurate payroll processing.
+
+
+
+
+
+
+
+
+**Step 6:** Finalize and Move Timesheets
+
+
+<img width="1312" alt="Move to external folder timesheet Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/8d13891d-4243-4b69-bd81-f6717fb9b4e5">
+<img width="1424" alt="External folder for processed timesheet" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/69d81536-a197-40f9-b295-2b821c3116e1">
+
+
+
+Move Processed Timesheets: After all validations and allocations are confirmed, the finalized timesheets are moved to an "external" folder in Google Drive dedicated to processed timesheets. This step is crucial for maintaining organized records and ensuring that processed data is stored securely and separately from ongoing entries.
+
+
+
+
+
+
+
+**Step 7:** Integration and Accessibility
+
+
+(INCLUDE IMAGES OF GOOGLE MAKE DETAILS)
+
+Accessibility: All processed timesheets in the Google Drive folder are now easily accessible for further review, audit, or archival purposes. This final step ensures that the data is not only processed correctly but also stored in a way that supports easy retrieval and compliance with data management practices.
+
+
+
+This TO-BE process for Timesheet Management streamlines the entire cycle from creation to processing, leveraging automation tools like Make and decision-making frameworks like DMN in Camunda. It ensures efficiency, accuracy, and compliance in managing employee timesheets at Nish Technologies, transforming the manual and error-prone tasks into a smooth, automated workflow.
 
 
 
