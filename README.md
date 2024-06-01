@@ -125,3 +125,32 @@ The Invoice generation process is now taken over by the accountant and is trigge
 9.	**Data Silos:** Data related to timesheets, projects, and invoices may be stored in disparate systems, leading to data silos and inefficiencies.
 
 
+
+
+
+# To BE Process
+
+ **PROCESS OVERVIEW:**
+
+There are 2 main processes:
+
+
+1. **Timesheet Management Process:** Deployed in Camunda as timesheet_management_to_be, this is the primary process that manages the entire lifecycle of employee timesheets. Each employee’s timesheet corresponds to one main process instance, capturing data from timesheet creation to final approval. At the end of each month, this main process is initiated automatically, aggregating and validating all submitted timesheets. If discrepancies are found during the validation step, a corrective action process is triggered for the employee to revise and resubmit their timesheet. This ensures that only accurate timesheets proceed to the payroll processing stage.
+
+2. **Invoice Generation Process:** Deployed in Camunda as invoice_generation_to_be, this is the main process dedicated to the generation and management of invoices derived from approved timesheets and other billable activities. This process is initiated monthly or as needed, loading all relevant data to create and validate invoices. Each invoice creation corresponds to one main process instance, ensuring that each document is processed independently to maintain integrity and traceability.
+
+These two sets of processes—timesheet management and invoice generation—are designed to enhance operational efficiency at Nish Technologies. By deploying these processes in Camunda, the company ensures that each critical task within timesheet and invoice management is handled systematically, reducing errors, improving turnaround times, and enhancing overall financial and operational control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
