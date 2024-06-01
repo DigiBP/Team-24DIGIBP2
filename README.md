@@ -96,3 +96,32 @@ The Invoice generation process is now taken over by the accountant and is trigge
 | 10  | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/03bae9bf-24ef-479f-8e22-acd4bd6ed59b">| Accountant sends the invoice to the appropriate party. | Final step in the invoicing process. |
 
 
+
+
+
+# AS-IS Business Process Problems
+
+<img width="468" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9dd989b5-2673-4d57-825d-a30b6077bb62">
+
+
+1. **Manual Data Validation**:The manual processes involved in timesheet and invoice management are fraught with inefficiencies and prone to errors. From the creation and dispatch of timesheets, which often lead to delays and loss of documents, to the accountant's time-consuming task of retrieving these timesheets from emails, each step lacks efficiency. Furthermore, the manual entry of timesheet data into systems and the subsequent creation of projects and invoices introduces a high potential for errors and inconsistencies. Finally, the process of manually downloading and sending invoices not only causes delays but also risks the correct delivery of these important documents, underscoring the need for more streamlined, automated solutions to enhance accuracy and reduce time wastage.
+
+
+2.	**Dependence on Email for Workflow Triggers:** The process starts with "Get Mail from Inbox," indicating reliance on email to trigger activities such as validating data and creating invoices. This dependency on email can lead to delays and inefficiencies, especially if emails are missed or not processed promptly.
+
+3.	**Sequential Process Flow:** The workflow seems very linear with a sequence of dependent steps. This can lead to bottlenecks, especially if any step takes longer than expected or if there are issues in the earlier stages of the process.
+
+4.	**Lack of Integration:** The diagram suggests possible lack of integration between different systems (e.g., timesheet creation, invoice generation). Lack of integration can lead to redundant data entry, increased errors, and inefficiency.
+
+5.	**Error Handling:** The process flow does not clearly define what happens when data is not validated (other than the workflow stopping at a "No" decision for "Project Exists"). There should be clear error handling and resolution processes to manage exceptions efficiently.
+
+6.	**Feedback Loop:** There appears to be no feedback mechanism for the originators of the timesheets or the invoices (e.g., employees, project managers). Feedback loops are crucial for continuous improvement and error correction.
+
+7.	**Scalability Issues:** The process as shown might not scale well with increasing numbers of employees or projects due to its manual and linear nature. As the company grows, the workload could become unmanageable without further automation or process optimization.
+
+8.	**Audit and Compliance:** The process does not explicitly mention any steps for audit and compliance checks, which are essential for financial transactions like invoicing and payroll.
+
+
+9.	**Data Silos:** Data related to timesheets, projects, and invoices may be stored in disparate systems, leading to data silos and inefficiencies.
+
+
