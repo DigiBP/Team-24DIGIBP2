@@ -77,3 +77,22 @@ The Invoice generation process is now taken over by the accountant and is trigge
 
 # Description of the AS-IS Process elements and problem comments
 
+
+
+
+
+
+| Row | Picture | Description | Comment |
+| --- | ------- | ----------- | ------- |
+| 1   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/f4d47ce4-a1fa-4d94-9cfa-feaf790da3ff"> | Project worker creates a timesheet. | Initial step in the process. |
+| 2   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cca99afd-aac1-43d2-a193-805a7201ec8c"> | Project worker sends the timesheet. | Hand-off to the accountant. |
+| 3   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9394e14c-02bd-42e4-937c-aaaaf8547d03"> | Accountant retrieves the email containing the timesheet. | Accountant begins their workflow. |
+| 4   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/3823f0ca-1ea3-4e3d-ac3f-9ff69f1fc333"> | Accountant validates the data in the timesheet. | Ensures accuracy and completeness. |
+| 5   | <img width="102" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/794054b6-4eb5-4ff9-b23f-382236b391d6"> | Accountant creates a project if it doesn’t already exist. | Conditional step based on project existence. |
+| 6   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/ce8f0efc-e380-4996-8691-404006c2359c"> | Accountant creates a project if it doesn’t already exist. | Conditional step based on project information. |
+| 7   |  <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/91cd13bd-0a2a-4fc1-b33b-e6bca97dcd6e"> | Accountant enters the time data into the system. | Continues only if the project exists. |
+| 8   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/00558128-ad8c-4c8a-99a0-c8690abf7f48"> | Accountant generates an invoice based on the time entry. | Key step for billing. |
+| 9   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/3bcebfa6-8ee7-48be-8253-0345f8fddaa0">| Accountant downloads the generated invoice. | Prepares for sending the invoice. |
+| 10  | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/03bae9bf-24ef-479f-8e22-acd4bd6ed59b">| Accountant sends the invoice to the appropriate party. | Final step in the invoicing process. |
+
+
