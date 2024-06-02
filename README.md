@@ -153,7 +153,7 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 
 
-**FINANCE DEPARTMENT**
+**Invoice Generation**
 
 | Row | Picture | Description             | Comment                                              |
 |-----|---------|-------------------------|------------------------------------------------------|
