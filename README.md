@@ -28,10 +28,10 @@ In the digital age, paper-based systems prove to be cumbersome, error-prone, and
 
 One of the tasks that required attention was the generation of invoices created through the timesheets. The timesheets needed to be Created, Compiled, Checked and Reviewed which would then present information relevant to create the Invoices necessary so project expenses could be delivered to relevant project owners.
 
-Our project aims to streamline and automate the payroll processing, timesheet creation, and invoice generation. We will digitalize their existing processes through Camunda and Make which will not only simplify these processes but also enhances accuracy and accessibility.
+Our project SmartInvoice aims to streamline and automate the payroll processing, timesheet creation, and invoice generation. We will digitalize their existing processes through Camunda and Make which will not only simplify these processes but also enhances accuracy and accessibility.
 
 There is no existing process model or workflow integration at Nish. Therefore, the Group created a best effort AS-IS BPMN process with the information they received from Jan. 
-As-IS Process Description
+
 
 
 
@@ -170,9 +170,31 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 
 
+**Timesheet Management**
 
 
+ **Employee**
 
+| Row | Picture                                    | Description                                  | Comment                                     |
+|-----|--------------------------------------------|----------------------------------------------|---------------------------------------------|
+| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> | Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
+| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | Employee fills out the timesheet.            | This step involves the actual input of work hours or details into the system. |
+
+
+ **HR DEPARTMENT**
+ 
+| Row | Picture | Description | Comment |
+| --- | ------- | ----------- | ------- |
+| 1   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 39 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/43d68d10-13f1-48ad-8216-fbcea6f3549d">| Initiate loading of timesheets at the end of each month for processing. | - |
+| 2   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 46 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9639c1ac-fa1c-43ad-8250-e28b39e88cd7"> | Retrieve customer information associated with the timesheets. | - |
+| 3   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c336adec-c3f5-4bd4-8ab1-19a616a572fb"> | Determine whether the timesheet entries are billable. | - |
+| 4   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a1a85f97-bc9c-4365-a9bc-cde23fc20d14">| Decision point to check if the timesheets are billable. | - |
+| 5   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2291792a-e91d-4180-aaaf-57e5c1b68b88">| Path followed if timesheets are billable. | - |
+| 6   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/20d5dd01-755d-41e2-991e-54e9dc1b5a46">| Path followed if timesheets are not billable. | - |
+| 7   |<img width="77" alt="Screenshot 2024-06-02 at 12 16 45 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e3b39d38-bd37-4540-a4c0-cd881e899320">| Notify the accounts department about the billable timesheets. | - |
+| 8   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/df6fc6dc-ed0d-4f43-95b1-1fd045ebc4b9"> | Move timesheets to processed folder based on the outcome of billing checks. | - |
+| 9   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 34 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/34128afe-8a31-41dd-be06-74a8f7529644">| Notify the HR department once timesheets are processed. | - |
+| 10  | <img width="77" alt="Screenshot 2024-06-02 at 12 18 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0c6a0081-68ba-4e28-b43d-e3575fd7f871">| Trigger further processing or other workflows via a webhook. | - |
 
 
 
