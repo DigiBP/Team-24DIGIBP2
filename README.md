@@ -211,6 +211,17 @@ These two sets of processes—timesheet management and invoice generation—are 
 | 8 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 17 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7e258198-ff05-4119-83b2-5b3537916aa2">|  Generates invoice records based on approved timesheets. | Integral for billing and financial documentation. |
 | 9 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 22 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/501e50fc-0b45-408e-9001-701b7f249d9d">| **C**: Represents the continuation of the process towards final invoicing and client notification. | Indicates ongoing process flow. |
 
+**Line Manager**
+
+| Row | Picture | Description | Comment |
+| --- | ------- | ----------- | ------- |
+| 1   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 58 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9d643d4e-6a49-41af-9ce5-29a19663bf9d">| Move to Processed-Timesheets(Internal) | Task to archive processed timesheets in an internal folder, ensuring organization and readiness for audits. |
+| 2   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 35 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/00466268-fa74-4d73-8d6f-5b1cc14a308e"> | Is Allocated to Internal Cost Center | Decision point to determine if expenses are allocated to an internal cost center, crucial for financial management. |
+| 3   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 28 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/704a89e9-cabb-4935-ac9a-327e13516d93">| Allocate to Internal Cost Center | Procedure to allocate expenses to the correct department's budget, aiding precise financial tracking. |
+| 4   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b940aea6-6fec-4645-9c8b-759c666efadb">| Lightning Bolt Symbol (Task Trigger) | Indicates an automated process trigger, enhancing workflow efficiency and reducing manual effort. |
+| 5   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/53ae9f32-dfab-47b9-8790-c458c5ade782">| Is Hours within Limit | Ensures that the reported hours are within the permissible range, maintaining compliance and controlling overtime. |
+| 6   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 06 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b09bbf6d-1896-453c-9164-39d8b24d1558">| Arrow with "B" | Directs to appropriate action if hours are outside the allowable range, potentially leading to further review or adjustment. |
+| 7   | <img width="77" alt="Screenshot 2024-06-02 at 1 04 03 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/25a7fda2-a55f-47cf-900d-3cfdfbe65e0e">| Arrow with "C" | Represents the direction towards subsequent tasks, maintaining the workflow's continuity and efficiency. |
 
 
 
