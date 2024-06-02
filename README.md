@@ -170,7 +170,7 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 
 
-**Timesheet Management**
+**TIMESHEET MANAGEMENT**
 
 
  **Employee**
@@ -181,7 +181,7 @@ These two sets of processes—timesheet management and invoice generation—are 
 | 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | Employee fills out the timesheet.            | This step involves the actual input of work hours or details into the system. |
 
 
- **HR DEPARTMENT**
+ **HR Department**
  
 | Row | Picture | Description | Comment |
 | --- | ------- | ----------- | ------- |
@@ -197,8 +197,19 @@ These two sets of processes—timesheet management and invoice generation—are 
 | 10  | <img width="77" alt="Screenshot 2024-06-02 at 12 18 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0c6a0081-68ba-4e28-b43d-e3575fd7f871">| Trigger further processing or other workflows via a webhook. | Automates the initiation of subsequent workflows, enhancing process efficiency.|
 
 
+**Project Manager**
 
-
+| Row | Picture | Description | Comment |
+| --- | ------- | ----------- | ------- |
+| 1 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 33 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0092c3ff-f1da-4669-af3f-39c92d6e8756"> | **Get Employee Allocation**: Checks current task allocations of an employee to ensure proper task assignment. | Ensures tasks are appropriately allocated before timesheet approval. |
+| 2 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 41 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e5582196-0691-4861-810a-da0068297e91">| **Is Employee Allocated**: Decision node to confirm if the employee is allocated to tasks. | Critical checkpoint to proceed with timesheet processing. |
+| 3 | <img width="85" alt="Screenshot 2024-06-02 at 12 34 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d4891224-fde6-442e-be6e-a472e4e50ea3">| **No**: Path taken if the employee has no current allocations. | Leads to system notification for allocation issue. |
+| 4 | <img width="120" alt="Screenshot 2024-06-02 at 12 34 59 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/361031dc-e41f-4f48-b736-d8142d765234"> | **Yes**: Path taken if allocations are confirmed. | Proceeds to timesheet approval. |
+| 5 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/05976efe-25ba-453b-8e1d-db372d8928fc">| **Is Timesheet Approved**: Decision node to check if the timesheet meets approval criteria. | Gatekeeper for further timesheet processing steps. |
+| 6 |<img width="77" alt="Screenshot 2024-06-02 at 12 57 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/afa4376c-5da2-4f09-884d-105a3f1e6170">| **Approve Timesheet**: Approves the timesheet after successful review. | Critical for proceeding to invoicing and record updates. |
+| 7 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/abedc5e4-3faa-421a-b3ea-27eeb5c1db53">| **Move to Processed-Timesheets(External)**: Moves approved timesheets to the external processed folder. | Segregates processed timesheets for archival and auditing. |
+| 8 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 17 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7e258198-ff05-4119-83b2-5b3537916aa2">| **Generate Invoice Records**: Generates invoice records based on approved timesheets. | Integral for billing and financial documentation. |
+| 9 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 22 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/501e50fc-0b45-408e-9001-701b7f249d9d">| **C**: Represents the continuation of the process towards final invoicing and client notification. | Indicates ongoing process flow. |
 
 
 
