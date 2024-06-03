@@ -6,9 +6,15 @@
 
 # Team Members
 
-1. Anjali Singh 
-2. Hima Bindhu
-3. Asfand Yar Arsalan
+| Name             | Email                                 |
+|------------------|---------------------------------------|
+| Anjali Singh   | Anjali.singh@students.fhnw.ch         |
+| Hima Bindu Ankem Venkata   | himabindu.ankemvenkata@students.fhnw.ch |
+| Asfand Yar Arsalan| asfand.arsalan@students.fhnw.ch  |
+
+
+
+
 
 
 
@@ -84,22 +90,22 @@ The Invoice generation process is now taken over by the accountant and is trigge
 
 | Row | Picture | Description | Comment |
 | --- | ------- | ----------- | ------- |
-| 1   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/f4d47ce4-a1fa-4d94-9cfa-feaf790da3ff"> | Project worker creates a timesheet. | Initial step in the process. |
-| 2   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cca99afd-aac1-43d2-a193-805a7201ec8c"> | Project worker sends the timesheet. | Hand-off to the accountant. |
-| 3   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9394e14c-02bd-42e4-937c-aaaaf8547d03"> | Accountant retrieves the email containing the timesheet. | Accountant begins their workflow. |
-| 4   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/3823f0ca-1ea3-4e3d-ac3f-9ff69f1fc333"> | Accountant validates the data in the timesheet. | Ensures accuracy and completeness. |
-| 5   | <img width="102" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/794054b6-4eb5-4ff9-b23f-382236b391d6"> | Accountant creates a project if it doesn’t already exist. | Conditional step based on project existence. |
-| 6   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/ce8f0efc-e380-4996-8691-404006c2359c"> | Accountant creates a project if it doesn’t already exist. | Conditional step based on project information. |
-| 7   |  <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/91cd13bd-0a2a-4fc1-b33b-e6bca97dcd6e"> | Accountant enters the time data into the system. | Continues only if the project exists. |
-| 8   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/00558128-ad8c-4c8a-99a0-c8690abf7f48"> | Accountant generates an invoice based on the time entry. | Key step for billing. |
-| 9   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/3bcebfa6-8ee7-48be-8253-0345f8fddaa0">| Accountant downloads the generated invoice. | Prepares for sending the invoice. |
-| 10  | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/03bae9bf-24ef-479f-8e22-acd4bd6ed59b">| Accountant sends the invoice to the appropriate party. | Final step in the invoicing process. |
+| 1   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/f4d47ce4-a1fa-4d94-9cfa-feaf790da3ff"> | **Manual TASK:** Project worker creates a timesheet. | Initial step in the process. |
+| 2   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cca99afd-aac1-43d2-a193-805a7201ec8c"> |**Manual TASK:** Project worker sends the timesheet. | Hand-off to the accountant. |
+| 3   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9394e14c-02bd-42e4-937c-aaaaf8547d03"> | **Manual TASK:** Accountant retrieves the email containing the timesheet. | Accountant begins their workflow. |
+| 4   | <img width="89" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/3823f0ca-1ea3-4e3d-ac3f-9ff69f1fc333"> |**Manual TASK:** Accountant validates the data in the timesheet. | Ensures accuracy and completeness. |
+| 5   | <img width="102" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/794054b6-4eb5-4ff9-b23f-382236b391d6"> | **Exclusive GATEWAY** Accountant creates a project if it doesn’t already exist. | Conditional step based on project existence. |
+| 6   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/ce8f0efc-e380-4996-8691-404006c2359c"> |**Manual TASK:** Accountant creates a project if it doesn’t already exist. | Conditional step based on project information. |
+| 7   |  <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/91cd13bd-0a2a-4fc1-b33b-e6bca97dcd6e"> |**Manual TASK:** Accountant enters the time data into the system. | Continues only if the project exists. |
+| 8   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/00558128-ad8c-4c8a-99a0-c8690abf7f48"> |**Manual TASK:** Accountant generates an invoice based on the time entry. | Key step for billing. |
+| 9   | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/3bcebfa6-8ee7-48be-8253-0345f8fddaa0">|**Manual TASK:** Accountant downloads the generated invoice. | Prepares for sending the invoice. |
+| 10  | <img width="92" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/03bae9bf-24ef-479f-8e22-acd4bd6ed59b">| **Manual TASK:** Accountant sends the invoice to the appropriate party. | Final step in the invoicing process. |
 
 
 
 
 
-# AS-IS Business Process Problems
+# AS-IS PAIN POINTS 
 
 <img width="468" alt="image" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9dd989b5-2673-4d57-825d-a30b6077bb62">
 
@@ -157,51 +163,51 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 | Row | Picture                                    | Description                                  | Comment                                     |
 |-----|--------------------------------------------|----------------------------------------------|---------------------------------------------|
-| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> | Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
-| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | Time Sheet created by Template            | This step involves the system creating a timesheet. |
+| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> |**User TASK:** Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
+| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> |**Service TASK:** Time Sheet created by Template            | This step involves the system creating a timesheet. |
 
 
  **HR Department**
  
 | Row | Picture | Description | Comment |
 | --- | ------- | ----------- | ------- |
-| 1   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 39 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/43d68d10-13f1-48ad-8216-fbcea6f3549d">| Initiate loading of timesheets at the begining of each month for processing. | Critical for ensuring all timesheets are accounted for before processing begins.|
-| 2   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 46 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9639c1ac-fa1c-43ad-8250-e28b39e88cd7"> | Retrieve customer information associated with the project. |Helps in linking timesheets to respective customers for billing|
-| 3   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c336adec-c3f5-4bd4-8ab1-19a616a572fb"> |DMN to Determine whether the timesheet entries are billable. | Essential for financial processing and determining revenue from billable hours. |
-| 4   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a1a85f97-bc9c-4365-a9bc-cde23fc20d14">| Decision point to check if the timesheets are billable. |  Decision-making step that influences downstream processing.  |
-| 5   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2291792a-e91d-4180-aaaf-57e5c1b68b88">| Path followed if timesheets are billable. | Leads to further actions for billable entries, such as notifying accounts.|
-| 6   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/20d5dd01-755d-41e2-991e-54e9dc1b5a46">| Path followed if timesheets are not billable. |Routes the non-billable timesheets to appropriate handling procedures.  |
-| 7   |<img width="77" alt="Screenshot 2024-06-02 at 12 16 45 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e3b39d38-bd37-4540-a4c0-cd881e899320">| Notify the accounts department about the billable timesheets. | Ensures the accounts team is updated for invoicing and revenue recording. |
-| 8   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/df6fc6dc-ed0d-4f43-95b1-1fd045ebc4b9"> | Move timesheets to processed folder based on the outcome of billing checks. | Organizes timesheets into correct folders for archiving and error checking. |
-| 9   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 34 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/34128afe-8a31-41dd-be06-74a8f7529644">| Notify the HR department if timesheets are defective | Ensures HR is aware of the defective of timesheet which require further processing.|
-| 10  | <img width="77" alt="Screenshot 2024-06-02 at 12 18 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0c6a0081-68ba-4e28-b43d-e3575fd7f871">| Error Indicating timesheet validation failure. | ensures the validation failure is captured to further notify the HR department.|
+| 1   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 39 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/43d68d10-13f1-48ad-8216-fbcea6f3549d">| **Service Task:** Initiate loading of timesheets at the begining of each month for processing. | Critical for ensuring all timesheets are accounted for before processing begins.|
+| 2   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 46 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9639c1ac-fa1c-43ad-8250-e28b39e88cd7"> |**Service Task:** Retrieve customer information associated with the project. |Helps in linking timesheets to respective customers for billing|
+| 3   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c336adec-c3f5-4bd4-8ab1-19a616a572fb"> |**DMN:**  to Determine whether the timesheet entries are billable. | Essential for financial processing and determining revenue from billable hours. |
+| 4   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a1a85f97-bc9c-4365-a9bc-cde23fc20d14">|**Exclusive Gateway:** Decision point to check if the timesheets are billable. |  Decision-making step that influences downstream processing.  |
+| 5   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2291792a-e91d-4180-aaaf-57e5c1b68b88">|**Intermediate Throw Event:** Path followed if timesheets are billable. | Leads to further actions for billable entries, such as notifying accounts.|
+| 6   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/20d5dd01-755d-41e2-991e-54e9dc1b5a46">|**Intermediate Throw Event:** Path followed if timesheets are not billable. |Routes the non-billable timesheets to appropriate handling procedures.  |
+| 7   |<img width="77" alt="Screenshot 2024-06-02 at 12 16 45 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e3b39d38-bd37-4540-a4c0-cd881e899320">| **Service TASK:** Notify the accounts department about the billable timesheets. | Ensures the accounts team is updated for invoicing and revenue recording. |
+| 8   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/df6fc6dc-ed0d-4f43-95b1-1fd045ebc4b9"> |**Service TASK:** Move timesheets to processed folder based on the outcome of billing checks. | Organizes timesheets into correct folders for archiving and error checking. |
+| 9   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 34 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/34128afe-8a31-41dd-be06-74a8f7529644">| **Service TASK:** Notify the HR department if timesheets are defective | Ensures HR is aware of the defective of timesheet which require further processing.|
+| 10  | <img width="77" alt="Screenshot 2024-06-02 at 12 18 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0c6a0081-68ba-4e28-b43d-e3575fd7f871">| **Error Event:** Error Indicating timesheet validation failure. | ensures the validation failure is captured to further notify the HR department.|
 
 
 **Project Manager**
 
 | Row | Picture | Description | Comment |
 | --- | ------- | ----------- | ------- |
-| 1 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 33 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0092c3ff-f1da-4669-af3f-39c92d6e8756"> |  Checks if employees are allocated to a project | Ensures employees are appropriately allocated before timesheet approval. |
-| 2 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 41 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e5582196-0691-4861-810a-da0068297e91">| Decision node to confirm if the employee is allocated to tasks. | Critical checkpoint to proceed with timesheet processing. |
-| 3 | <img width="85" alt="Screenshot 2024-06-02 at 12 34 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d4891224-fde6-442e-be6e-a472e4e50ea3">| **No**: Path taken if the employee has no current allocations. | Leads to system notification for allocation issue. |
-| 4 | <img width="120" alt="Screenshot 2024-06-02 at 12 34 59 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/361031dc-e41f-4f48-b736-d8142d765234"> | **Yes**: Path taken if allocations are confirmed. | Proceeds to timesheet approval. |
-| 5 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/05976efe-25ba-453b-8e1d-db372d8928fc">|  Decision node to check if the timesheet meets approval criteria. | Gatekeeper for further timesheet processing steps. |
-| 6 |<img width="77" alt="Screenshot 2024-06-02 at 12 57 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/afa4376c-5da2-4f09-884d-105a3f1e6170">|  Approves the timesheet after successful review. | Critical for proceeding to invoicing and record updates. |
-| 7 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/abedc5e4-3faa-421a-b3ea-27eeb5c1db53">|  Moves approved timesheets to the external processed folder. | Segregates processed timesheets for archival and auditing. |
-| 8 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 17 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7e258198-ff05-4119-83b2-5b3537916aa2">|  Generates invoice records based on approved timesheets. | Integral for billing and financial documentation. |
-| 9 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 22 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/501e50fc-0b45-408e-9001-701b7f249d9d">| **C**: Represents the continuation of the process towards final invoicing and client notification. | Indicates ongoing process flow. |
+| 1 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 33 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0092c3ff-f1da-4669-af3f-39c92d6e8756"> |**Service TASK:**  Checks if employees are allocated to a project | Ensures employees are appropriately allocated before timesheet approval. |
+| 2 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 41 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e5582196-0691-4861-810a-da0068297e91">|**Exclusive Gateway:** Decision node to confirm if the employee is allocated to tasks. | Critical checkpoint to proceed with timesheet processing. |
+| 3 | <img width="85" alt="Screenshot 2024-06-02 at 12 34 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d4891224-fde6-442e-be6e-a472e4e50ea3">| **Error End Event:** Path taken if the employee has no current allocations. | Leads to system notification for allocation issue. |
+| 4 | <img width="120" alt="Screenshot 2024-06-02 at 12 34 59 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/361031dc-e41f-4f48-b736-d8142d765234"> | **User TASK:** Path taken if allocations are confirmed. | Proceeds to timesheet approval. |
+| 5 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/05976efe-25ba-453b-8e1d-db372d8928fc">| **Exclusive Gateway:** Decision node to check if the timesheet meets approval criteria. | Gatekeeper for further timesheet processing steps. |
+| 6 |<img width="77" alt="Screenshot 2024-06-02 at 12 57 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/afa4376c-5da2-4f09-884d-105a3f1e6170">| **User TASK:** Approves the timesheet after successful review. | Critical for proceeding to invoicing and record updates. |
+| 7 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/abedc5e4-3faa-421a-b3ea-27eeb5c1db53">|**Service TASK:**  Moves approved timesheets to the external processed folder. | Segregates processed timesheets for archival and auditing. |
+| 8 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 17 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7e258198-ff05-4119-83b2-5b3537916aa2">| **Service TASK:** Generates invoice records based on approved timesheets. | Integral for billing and financial documentation. |
+| 9 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 22 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/501e50fc-0b45-408e-9001-701b7f249d9d">| **Link Intermediate Throw Event**: Represents the continuation of the process towards final invoicing and client notification. | Indicates ongoing process flow. |
 
 **Line Manager**
 
 | Row | Picture | Description | Comment |
 | --- | ------- | ----------- | ------- |
-| 1   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 58 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9d643d4e-6a49-41af-9ce5-29a19663bf9d">| Move to Processed-Timesheets(Internal) | Task to archive processed timesheets in an internal folder, ensuring organization and readiness for audits. |
-| 2   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 35 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/00466268-fa74-4d73-8d6f-5b1cc14a308e"> | Is Allocated to Internal Cost Center | Decision point to determine if expenses are allocated to an internal cost center, crucial for financial management. |
-| 3   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 28 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/704a89e9-cabb-4935-ac9a-327e13516d93">| Allocate to Internal Cost Center | Procedure to allocate expenses to the correct department's budget, aiding precise financial tracking. |
-| 4   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b940aea6-6fec-4645-9c8b-759c666efadb">| Lightning Bolt Symbol (Task Trigger) | Indicates an automated process trigger, enhancing workflow efficiency and reducing manual effort. |
-| 5   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/53ae9f32-dfab-47b9-8790-c458c5ade782">| Is Hours within Limit | Ensures that the reported hours are within the permissible range, maintaining compliance and controlling overtime. |
-| 6   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 06 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b09bbf6d-1896-453c-9164-39d8b24d1558">| Arrow with "B" | Directs to appropriate action if hours are outside the allowable range, potentially leading to further review or adjustment. |
-| 7   | <img width="77" alt="Screenshot 2024-06-02 at 1 04 03 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/25a7fda2-a55f-47cf-900d-3cfdfbe65e0e">| Arrow with "C" | Represents the direction towards subsequent tasks, maintaining the workflow's continuity and efficiency. |
+| 1   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 58 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9d643d4e-6a49-41af-9ce5-29a19663bf9d">|**Service TASK:** Move to Processed-Timesheets(Internal) | Task to archive processed timesheets in an internal folder, ensuring organization and readiness for audits. |
+| 2   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 35 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/00466268-fa74-4d73-8d6f-5b1cc14a308e"> |**Exclusive Gateway:** Is Allocated to Internal Cost Center | Decision point to determine if expenses are allocated to an internal cost center, crucial for financial management. |
+| 3   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 28 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/704a89e9-cabb-4935-ac9a-327e13516d93">|**User TASK** Allocate to Internal Cost Center | Procedure to allocate expenses to the correct department's budget, aiding precise financial tracking. |
+| 4   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b940aea6-6fec-4645-9c8b-759c666efadb">| **Error Event:** Lightning Bolt Symbol (Task Trigger) | Indicates an automated process trigger, enhancing workflow efficiency and reducing manual effort. |
+| 5   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/53ae9f32-dfab-47b9-8790-c458c5ade782">| **Exclusive Gateway:** Is Hours within Limit | Ensures that the reported hours are within the permissible range, maintaining compliance and controlling overtime. |
+| 6   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 06 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b09bbf6d-1896-453c-9164-39d8b24d1558">| **Link Intermediate Catch Event:** Arrow with "B" | Directs to appropriate action if hours are outside the allowable range, potentially leading to further review or adjustment. |
+| 7   | <img width="77" alt="Screenshot 2024-06-02 at 1 04 03 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/25a7fda2-a55f-47cf-900d-3cfdfbe65e0e">| **Link Intermediate Throw Event:** Arrow with "C" | Represents the direction towards subsequent tasks, maintaining the workflow's continuity and efficiency. |
 
 
 
@@ -211,14 +217,14 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 | Row | Picture | Description             | Comment                                              |
 |-----|---------|-------------------------|------------------------------------------------------|
-| 1   | <img width="93" alt="Screenshot 2024-06-02 at 11 23 54 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/941bb34d-8c35-4dc8-92c9-c726a0b6841f"> | Load Invoices | Invoices are loaded monthly for processing.         |
-| 2   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 04 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/94b440d5-7e3b-469f-ad23-976b1aacae82">| Validate Invoice | Each invoice is validated for accuracy and completeness. |
-| 3   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 11 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cb056e31-e19a-409c-b99e-02a4205e92f5">| Review Invoice | Invoices undergo a detailed review to ensure they meet set criteria. |
-| 4   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 53 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/471e066f-cc46-4e8a-b441-aafcb9f893e8">| Move to Error Folder | Invoices that fail the review are moved to an error folder for correction. |
-| 6   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 34 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/64824990-2599-4b22-9499-b19bbfff3be9">| Send Invoice to Client | Approved invoices are sent to the client. |
-| 7   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 39 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1b0789a1-4096-4da8-a3fe-b67f34c5d3ed">| Move to Processed Folder | Successfully processed invoices are stored in the processed folder. |
-| 8   |  <img width="93" alt="Screenshot 2024-06-02 at 11 24 58 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d2d3ddb8-8892-43fb-aa2d-c93e47e10dcd"> | Update Invoice Records | The records are updated to reflect the processed invoices. |
-| 9   | <img width="93" alt="Screenshot 2024-06-02 at 11 25 02 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c58ab511-3a96-46d8-b9f8-3543e16093d2">| Notify Accounts Manager | The accounts manager is notified upon completion or issues. |
+| 1   | <img width="93" alt="Screenshot 2024-06-02 at 11 23 54 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/941bb34d-8c35-4dc8-92c9-c726a0b6841f"> |**Service TASK:**  Load Invoices | Invoices are loaded monthly for processing.         |
+| 2   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 04 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/94b440d5-7e3b-469f-ad23-976b1aacae82">|**User TASK:** Validate Invoice | Each invoice is validated for accuracy and completeness. |
+| 3   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 11 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cb056e31-e19a-409c-b99e-02a4205e92f5">|**Exclusive Gateway:** Review Invoice | Invoices undergo a detailed review to ensure they meet set criteria. |
+| 4   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 53 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/471e066f-cc46-4e8a-b441-aafcb9f893e8">|**Service TASK:** Move to Error Folder | Invoices that fail the review are moved to an error folder for correction. |
+| 6   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 34 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/64824990-2599-4b22-9499-b19bbfff3be9">| **Service TASK:** Send Invoice to Client | Approved invoices are sent to the client. |
+| 7   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 39 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1b0789a1-4096-4da8-a3fe-b67f34c5d3ed">| **Service TASK:** Move to Processed Folder | Successfully processed invoices are stored in the processed folder. |
+| 8   |  <img width="93" alt="Screenshot 2024-06-02 at 11 24 58 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d2d3ddb8-8892-43fb-aa2d-c93e47e10dcd"> |**Service TASK:** Update Invoice Records | The records are updated to reflect the processed invoices. |
+| 9   | <img width="93" alt="Screenshot 2024-06-02 at 11 25 02 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c58ab511-3a96-46d8-b9f8-3543e16093d2">|**Service TASK:** Notify Accounts Manager | The accounts manager is notified upon completion or issues. |
 
 
 
@@ -240,8 +246,19 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 
 
-Camunda Model for Timesheet:
-<img width="917" alt="TO-BE TimeSheet creation" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cb2bd969-a522-4b93-9a62-34e326805e86">
+**Camunda Model for Timesheet:**
+
+
+![TO-BE_SmartInvoice_Timesheet Approval Process](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1c75165e-18da-4158-a925-640c7a0b6172)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -272,8 +289,7 @@ Form Submission: Employees start by filling out a digital form to create a times
 **Step 2:** Automate Timesheet Creation
 
 
-
-<img width="1265" alt="Create Timesheet Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/135dab83-b0a6-4568-8fb8-3ea2550e2e20">
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/dff0d90b-6a41-4651-9458-04640e8def3c)
 
 
 
@@ -290,8 +306,9 @@ Webhook Response: After the spreadsheet is created, a confirmation is sent back 
 **Step 3:** Load and Process Timesheets
 
 
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c3cdfce4-956f-4c41-b71c-6b77ade39fe6)
 
-<img width="1312" alt="Load Timesheet Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/8b02c6cd-1fae-4ac2-9b91-85dee7b9f04a">
+
 
 
 Monthly Batch Processing: At the end of each month, another automated process is initiated via Make to load all timesheets for the current month. This involves searching for relevant files in Google Drive, followed by compiling and organizing the data using Google Sheets and other tools to aggregate and format the data appropriately.
@@ -304,8 +321,11 @@ Monthly Batch Processing: At the end of each month, another automated process is
 
 **Step 4:** Determine Project Details and Billability
 
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/8e8c29be-9f50-40e7-a005-67d1465513f1)
 
-<img width="1312" alt="Get Project for timesheet" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/fdcd8223-6cde-4681-a995-879156c9c62e">
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/ef7f04c9-e12a-457c-8627-9b670838a8a6)
+
+
 <img width="732" alt="DMN Overview" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/bbb6f18b-b8a1-47c6-ba2c-d701242978de">
 <img width="882" alt="DMN Table 1" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d7ebbf8f-1fd6-445d-a464-c71ddb6305f4">
 <img width="1093" alt="DMN Table 2" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1474b244-c3ec-4da1-9fc6-d6ee9c819167">
@@ -325,7 +345,7 @@ Decision Making Using DMN: Decision Model and Notation (DMN) tables are utilized
 **Step 5:** Allocate to Employees
 
 
-<img width="1312" alt="Employee allocation make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a44f25a3-9710-4d2f-ad9d-f5313bd48c26">
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/bc59d4dd-4d6d-4616-a28c-a10b603ec324)
 
 
 Employee Allocation: A specific process in Make checks the allocation of each employee to projects. This step ensures that timesheets are accurately associated with the right employee and project, which is crucial for accurate payroll processing.
@@ -374,29 +394,22 @@ This TO-BE process for Timesheet Management streamlines the entire cycle from cr
 
 
 
-# Process 2:  Invoice Generation Process
 
-Camunda Model for Invoice Generation
-
-<img width="774" alt="To-BE Invoice Generation" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/dbd3975a-8903-4dac-9d6f-728875c22ca2">
-
-
-
-
-**Step 1:** Generate Invoice Record from Template
+**Step 8:** Generate Invoice Record from Template
 
 
 Description: The process initiates with a custom webhook that triggers the creation of an invoice record. The invoice is generated from a predefined template in Google Sheets to ensure uniformity and accuracy.
 
 
 
-<img width="1339" alt="Generate invoice Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c4bad08c-a287-4317-ae01-3f48e674db25">
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/8b1d5a85-21a9-4a86-831f-207a92bd3efd)
 
 
 
 
 
-**Step 2:** Store Invoice Records
+
+**Step 9:** Store Invoice Records
 
 
 
@@ -406,7 +419,7 @@ Description: The process initiates with a custom webhook that triggers the creat
 
 Description: The invoice generation process begins with a custom webhook that triggers the automated creation of an invoice from a predefined template in Google Sheets. This approach ensures that every invoice adheres to the company's standards for uniformity and accuracy, laying the groundwork for reliable financial documentation.
 
-**Step 3:** Notify Accounts Department
+**Step 10:** Notify Accounts Department
 
 
 
@@ -422,7 +435,7 @@ Description: Following the generation of the invoice, the accounts department is
 
 
 
-**Step 4:** Move Processed Timesheets to Appropriate Folders
+**Step 11:** Move Processed Timesheets to Appropriate Folders
 
 
 
@@ -439,13 +452,23 @@ Description: Based on the outcome of the invoice validation—successful or erro
 
 
 
+# Process 2:  Invoice Generation Process
+
+Camunda Model for Invoice Generation
+
+<img width="774" alt="To-BE Invoice Generation" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/dbd3975a-8903-4dac-9d6f-728875c22ca2">
 
 
-**Step 5:** Load and Review Invoices
 
 
 
-<img width="1325" alt="Load Invoices" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2d3422cf-ebf3-4a07-b81f-81d8ca7f4896">
+
+**Step 1:** Load and Review Invoices
+
+
+
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/3df2c42b-98d9-4520-9e1f-b1ffcba6586d)
+
 
 
 
@@ -456,14 +479,20 @@ Description: Invoices are periodically loaded and reviewed to ensure they meet a
 
 
 
+**Step 2:** Send Invoice to Client
+
+
+
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/5bffb07f-22bf-4370-9715-b31ea003a0f0)
 
 
 
 
 
-**Step 7:** Final Processing and Record Updates
+**Step 3:** Final Processing and Record Updates
 
 
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/eaa96227-7c1a-4b57-bbcd-7237f0b09873)
 
 <img width="1325" alt="Move to processed folder(success)" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0bfd0090-d502-49af-8f6b-d1521597ea72">
 <img width="1325" alt="Update Invoice Records" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7b280f86-0f17-49df-bd02-f3a2bcaf1f7b">
@@ -509,5 +538,7 @@ The enhanced TO-BE processes for Invoice Generation and Timesheet Management at 
 
 To further refine and enhance the processes of invoice generation and timesheet management, Nish Technologies could consider several improvements. Integration with ERP systems would offer a more unified view of operational and financial data, enhancing real-time decision-making and financial planning. The implementation of machine learning algorithms could preemptively identify anomalies, significantly improving the accuracy and efficiency of processing. Strengthening security protocols around sensitive data through advanced encryption and multi-factor authentication will safeguard against breaches and unauthorized access. Establishing continuous feedback loops with employees and clients will enable the company to promptly address any issues and adapt processes to better meet stakeholder needs. Furthermore, ongoing training programs will ensure that employees remain knowledgeable about the latest technologies and process updates, maximizing their ability to effectively leverage these tools. By embracing these suggestions, Nish Technologies will not only optimize current operations but also maintain its competitive edge in a dynamically evolving business landscape.
 
+# 🙏 Acknowledgements
 
+We would like to thank our coaches, Andreas Martin and Charuta Pande, for their invaluable guidance and unwavering support throughout this project.
 
