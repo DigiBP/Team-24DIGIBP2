@@ -243,7 +243,7 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 
 
-# Process 1: Timesheet Management Process
+# Process 1: Timesheet Creation Process
 
 
 
@@ -301,10 +301,21 @@ Webhook Response: After the spreadsheet is created, a confirmation is sent back 
 
 
 
+# Process 2: Timesheet Management Process
+
+
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/33cf3659-f6d7-40ce-937f-b0879d019bce)
 
 
 
-**Step 3:** Load and Process Timesheets
+This process is triggered on the 1st day of the month, the timesheets from the previous month are picked up for processing.
+
+
+
+
+
+
+**Step 1:** Load and Process Timesheets
 
 
 ![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c3cdfce4-956f-4c41-b71c-6b77ade39fe6)
@@ -312,7 +323,7 @@ Webhook Response: After the spreadsheet is created, a confirmation is sent back 
 
 
 
-Monthly Batch Processing: At the end of each month, another automated process is initiated via Make to load all timesheets for the current month. This involves searching for relevant files in Google Drive, followed by compiling and organizing the data using Google Sheets and other tools to aggregate and format the data appropriately.
+Monthly Batch Processing: At the begining of each month, an automated process is initiated via Make to load all timesheets for the  month. This involves searching for relevant files in Google Drive, followed by compiling and organizing the data using Google Sheets and other tools to aggregate and format the data appropriately.
 
 
 
@@ -320,7 +331,7 @@ Monthly Batch Processing: At the end of each month, another automated process is
 
 
 
-**Step 4:** Determine Project Details and Billability
+**Step 2:** Determine Project Details and Billability
 
 ![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/8e8c29be-9f50-40e7-a005-67d1465513f1)
 
@@ -333,23 +344,23 @@ Monthly Batch Processing: At the end of each month, another automated process is
 
 
 
-Fetching Project Details: Using a combination of Google Sheets and custom logic (e.g., webhooks and scripting), the process fetches detailed project information related to each timesheet. This includes determining the project's current status and its customer details.
+Fetching Project Details and Customer Details: Using a combination of Google Sheets and custom logic (e.g., webhooks and scripting), the process fetches detailed project information related to each timesheet. This includes determining the project's current active status and if Customer is an internal or external client.
 
-Decision Making Using DMN: Decision Model and Notation (DMN) tables are utilized to ascertain whether the project is billable based on its status and other characteristics. This helps in categorizing the timesheets into billable and non-billable.
-
-
+Decision Making Using DMN: Decision Model and Notation (DMN) tables are utilized to ascertain whether the project is billable based on status.This helps in categorizing the timesheets into billable and non-billable. The default process goes forward only when the project is an active state and customer is an external client. 
 
 
 
 
 
-**Step 5:** Allocate to Employees
+
+
+**Step 3:** Allocate to Employees
 
 
 ![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/bc59d4dd-4d6d-4616-a28c-a10b603ec324)
 
 
-Employee Allocation: A specific process in Make checks the allocation of each employee to projects. This step ensures that timesheets are accurately associated with the right employee and project, which is crucial for accurate payroll processing.
+Employee Allocation: A specific process in Make checks the allocation of each employee to projects. This step ensures that timesheets are accurately associated with the right employee and project, which is crucial for accurate Invoice processing.
 
 
 
@@ -358,7 +369,7 @@ Employee Allocation: A specific process in Make checks the allocation of each em
 
 
 
-**Step 6:** Finalize and Move Timesheets
+**Step 4:** Finalize and Move Timesheets
 
 
 <img width="1312" alt="Move to external folder timesheet Make" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/8d13891d-4243-4b69-bd81-f6717fb9b4e5">
@@ -366,26 +377,7 @@ Employee Allocation: A specific process in Make checks the allocation of each em
 
 
 
-Move Processed Timesheets: After all validations and allocations are confirmed, the finalized timesheets are moved to an "external" folder in Google Drive dedicated to processed timesheets. This step is crucial for maintaining organized records and ensuring that processed data is stored securely and separately from ongoing entries.
-
-
-
-
-
-
-
-**Step 7:** Integration and Accessibility
-
-<img width="467" alt="Generated taks form" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/bc30b734-523a-4741-9d58-765dfffd6b59">
-<img width="485" alt="Google sheet form" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/687eb7ca-4032-4ca6-842d-c38fb1e0c5e4">
-
-
-
-Accessibility: All processed timesheets in the Google Drive folder are now easily accessible for further review, audit, or archival purposes. This final step ensures that the data is not only processed correctly but also stored in a way that supports easy retrieval and compliance with data management practices.
-
-
-
-This TO-BE process for Timesheet Management streamlines the entire cycle from creation to processing, leveraging automation tools like Make and decision-making frameworks like DMN in Camunda. It ensures efficiency, accuracy, and compliance in managing employee timesheets at Nish Technologies, transforming the manual and error-prone tasks into a smooth, automated workflow.
+Move Processed Timesheets: After all validations and allocations are confirmed, the approved timesheets are moved to an "external" folder in Google Drive dedicated to processed timesheets. This step is crucial for maintaining organized records and ensuring that processed data is stored securely and separately from ongoing entries.
 
 
 
@@ -395,11 +387,10 @@ This TO-BE process for Timesheet Management streamlines the entire cycle from cr
 
 
 
+**Step 5:** Generate Invoice Record from Template
 
-**Step 8:** Generate Invoice Record from Template
 
-
-Description: The process initiates with a custom webhook that triggers the creation of an invoice record. The invoice is generated from a predefined template in Google Sheets to ensure uniformity and accuracy.
+Description: The process initiates with a custom webhook that triggers the creation of an invoice record. The invoice is generated from a predefined template in Google Sheets to ensure uniformity and accuracy, laying the groundwork for reliable financial documentation.
 
 
 
@@ -410,7 +401,7 @@ Description: The process initiates with a custom webhook that triggers the creat
 
 
 
-**Step 9:** Store Invoice Records
+**Step 6:** Store Invoice Records
 
 
 
@@ -418,9 +409,11 @@ Description: The process initiates with a custom webhook that triggers the creat
 
 
 
-Description: The invoice generation process begins with a custom webhook that triggers the automated creation of an invoice from a predefined template in Google Sheets. This approach ensures that every invoice adheres to the company's standards for uniformity and accuracy, laying the groundwork for reliable financial documentation.
+Description: The generated invoice record current status is stored in a table to track its processing. 
 
-**Step 10:** Notify Accounts Department
+
+
+**Step 7:** Notify Accounts Department
 
 
 
@@ -436,7 +429,7 @@ Description: Following the generation of the invoice, the accounts department is
 
 
 
-**Step 11:** Move Processed Timesheets to Appropriate Folders
+**Step 8:** Move Processed Timesheets to Appropriate Folders
 
 
 
@@ -453,12 +446,22 @@ Description: Based on the outcome of the invoice validation—successful or erro
 
 
 
-# Process 2:  Invoice Generation Process
+This TO-BE process for Timesheet Management streamlines the entire cycle from creation to processing, leveraging automation tools like Make and decision-making frameworks like DMN in Camunda. It ensures efficiency, accuracy, and compliance in managing employee timesheets at Nish Technologies, transforming the manual and error-prone tasks into a smooth, automated workflow.
+
+
+# Process 3:  Invoice Generation Process
+
 
 Camunda Model for Invoice Generation
 
 <img width="774" alt="To-BE Invoice Generation" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/dbd3975a-8903-4dac-9d6f-728875c22ca2">
 
+
+
+<img width="269" alt="image (18)" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7d830c58-835d-4e0b-9028-2d092314edbd">
+
+
+Invoice Processing is triggered as a cron job on the 2nd day of every month.
 
 
 
@@ -474,7 +477,7 @@ Camunda Model for Invoice Generation
 
 
 
-Description: Invoices are periodically loaded and reviewed to ensure they meet all required standards and specifications. This regular audit and quality check help in maintaining compliance and accuracy in the financial documentation, safeguarding against potential financial discrepancies or errors.
+Description: Invoices are loaded and reviewed to ensure they meet all required standards and specifications. This regular audit and quality check help in maintaining compliance and accuracy in the financial documentation, safeguarding against potential financial discrepancies or errors.
 
 
 
@@ -487,9 +490,10 @@ Description: Invoices are periodically loaded and reviewed to ensure they meet a
 ![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/5bffb07f-22bf-4370-9715-b31ea003a0f0)
 
 
-Webhooks initiates the workflow by receiving a trigger, such as an invoice ready notification, from an external system. A custom webhook is configured to start the process upon receiving specific data. This could include details like the invoice ID, client information, or other pertinent data necessary to locate and handle the invoice document.The Google Drive Downloads the relevant invoice file from Google Drive. Once triggered, the workflow accesses Google Drive to retrieve the specified invoice file. This involves connecting to a Google Drive account, locating the file using an identifier (like a file ID or name), and downloading it for further processing.Then through Gmail
+
+The Google Drive Downloads the relevant invoice file from Google Drive. Once triggered, the workflow accesses Google Drive to retrieve the specified invoice file. This involves connecting to a Google Drive account, locating the file using an identifier (like a file ID or name), and downloading it for further processing.Then through Gmail
  the downloaded invoice is sent to the client via email, the next step uses Gmail to send this file as an attachment to the client. The process involves configuring the email recipient’s address, subject line, and body content, which typically includes a polite message regarding the invoice details and any instructions for payment.
-Next Webhooks Response Completes the process by sending a response back to the initiating system. After the invoice is sent, a webhook response is generated to update the status of the process. This typically includes sending a success confirmation (like HTTP status code 200) back to the original system to signify that the invoice has been successfully sent, closing the loop on this automated task.
+Next Webhooks Response Completes the process by sending a response back to the initiating system. After the invoice is sent to the client, a webhook response is generated to update the status of the process. This typically includes sending a success confirmation (like HTTP status code 200) back to the original system to signify that the invoice has been successfully sent, closing the loop on this automated task.
 
 
 
@@ -504,13 +508,18 @@ Next Webhooks Response Completes the process by sending a response back to the i
 
 
 
-
-Description: Upon successful processing, invoices are moved to a 'processed' folder, indicating the completion of their lifecycle. Simultaneously, invoice records in Google Sheets are updated to reflect their current status. This final step ensures that all invoice data is up-to-date and accurately reflected in financial reports and audits
-
+Description: Upon successful processing, invoices are moved to a 'processed' folder, indicating the completion of their lifecycle. Simultaneously, invoice records in Google Sheets are updated to reflect their current status. This ensures that all invoice data is up-to-date and accurately reflected in financial reports and audits
 
 
 
+**Step 4:** Invoice Processing - Error Flow
 
+
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9b30db20-bae4-4762-aa3a-d3c91effebd7)
+
+
+
+Description: Upon unsucessful processing, invoices are moved to a 'Error' folder, indicating the incorrect information. Simultaneously, invoice records in Google Sheets are updated to reflect their current status. This final step ensures that the account manager is notified of the error prone invoice records so that all invoice data can be up-to-date and accurately reflected in financial reports and audits
 
 
 
@@ -545,4 +554,5 @@ To further refine and enhance the processes of invoice generation and timesheet 
 
 # 🙏 Acknowledgements
 
-With profound gratitude, we acknowledge our coaches, Andreas Martin and Charuta Pande, whose insightful guidance and steadfast support have been the cornerstone of our project's success.
+
+Our journey reached new heights thanks to the visionary guidance and unyielding support of our remarkable coaches, Andreas Martin and Charuta Pande. Their expertise and dedication have been the driving force behind our success, and we are deeply thankful for their invaluable contributions.
