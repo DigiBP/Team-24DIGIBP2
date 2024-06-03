@@ -24,13 +24,13 @@ This document describes the contribution to the process from Nish's Company As p
 
 # Description of the Use Case
 
-In the digital age, paper-based systems prove to be cumbersome, error-prone, and time-intensive. For our project, we are inspired by Nish Technologies which was founded sometime in 2023 as people consulting company to provide services to its customers.. Nish essentially deals with payroll processing for its employees and timesheet and invoicing for its customers, acting as a middle person for both.it is on currently on the brink of digital transformation as This company's current reliance on manual, paper-based processes for HR management makes it an ideal scenario for our digital solution.
+In the digital age, paper-based systems prove to be cumbersome, error-prone, and time-intensive. For our project, we are inspired by Nish Technologies which was founded sometime in 2023 as people consulting company to provide services to its customers.. Nish essentially deals with payroll processing for its employees and timesheet and invoicing for its customers, acting as a middle person for both.it is currently on the brink of digital transformation as This company's current reliance on manual, paper-based processes for HR management makes it an ideal scenario for our digital solution.
 
 One of the tasks that required attention was the generation of invoices created through the timesheets. The timesheets needed to be Created, Compiled, Checked and Reviewed which would then present information relevant to create the Invoices necessary so project expenses could be delivered to relevant project owners.
 
-Our project SmartInvoice aims to streamline and automate the payroll processing, timesheet creation, and invoice generation. We will digitalize their existing processes through Camunda and Make which will not only simplify these processes but also enhances accuracy and accessibility.
+Our product SmartInvoice aims to streamline and automate the payroll processing, timesheet creation, and invoice generation. We will digitalize their existing processes through Camunda and Make which will not only simplify these processes but also enhances accuracy and accessibility.
 
-There is no existing process model or workflow integration at Nish. Therefore, the Group created a best effort AS-IS BPMN process with the information they received from Jan. 
+There is no existing process model or workflow integration at Nish. Therefore, our Group created a best effort AS-IS BPMN process with the information they received from our Collegue. 
 
 
 
@@ -119,10 +119,8 @@ The Invoice generation process is now taken over by the accountant and is trigge
 
 7.	**Scalability Issues:** The process as shown might not scale well with increasing numbers of employees or projects due to its manual and linear nature. As the company grows, the workload could become unmanageable without further automation or process optimization.
 
-8.	**Audit and Compliance:** The process does not explicitly mention any steps for audit and compliance checks, which are essential for financial transactions like invoicing and payroll.
 
-
-9.	**Data Silos:** Data related to timesheets, projects, and invoices may be stored in disparate systems, leading to data silos and inefficiencies.
+8.	**Data Silos:** Data related to timesheets, projects, and invoices may be stored in disparate systems, leading to data silos and inefficiencies.
 
 
 
