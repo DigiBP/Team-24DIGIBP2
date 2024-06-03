@@ -131,7 +131,7 @@ The Invoice generation process is now taken over by the accountant and is trigge
 
 
 
-# To BE Process
+# TO BE Process
 
  **PROCESS OVERVIEW:**
 
@@ -541,5 +541,4 @@ To further refine and enhance the processes of invoice generation and timesheet 
 
 # 🙏 Acknowledgements
 
-We would like to thank our coaches, Andreas Martin and Charuta Pande, for their invaluable guidance and unwavering support throughout this project.
-
+With profound gratitude, we acknowledge our coaches, Andreas Martin and Charuta Pande, whose insightful guidance and steadfast support have been the cornerstone of our project's success.
