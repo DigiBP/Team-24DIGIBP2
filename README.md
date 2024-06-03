@@ -157,8 +157,8 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 | Row | Picture                                    | Description                                  | Comment                                     |
 |-----|--------------------------------------------|----------------------------------------------|---------------------------------------------|
-| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> |UserTask: Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
-| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | ServiceTask: Time Sheet created by Template            | This step involves the system creating a timesheet. |
+| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> | Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
+| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | Time Sheet created by Template            | This step involves the system creating a timesheet. |
 
 
  **HR Department**
@@ -173,15 +173,15 @@ These two sets of processes—timesheet management and invoice generation—are 
 | 6   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/20d5dd01-755d-41e2-991e-54e9dc1b5a46">| Path followed if timesheets are not billable. |Routes the non-billable timesheets to appropriate handling procedures.  |
 | 7   |<img width="77" alt="Screenshot 2024-06-02 at 12 16 45 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e3b39d38-bd37-4540-a4c0-cd881e899320">| Notify the accounts department about the billable timesheets. | Ensures the accounts team is updated for invoicing and revenue recording. |
 | 8   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/df6fc6dc-ed0d-4f43-95b1-1fd045ebc4b9"> | Move timesheets to processed folder based on the outcome of billing checks. | Organizes timesheets into correct folders for archiving and error checking. |
-| 9   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 34 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/34128afe-8a31-41dd-be06-74a8f7529644">| Notify the HR department once timesheets are processed. | Ensures HR is aware of the completion of timesheet processing for further actions.|
-| 10  | <img width="77" alt="Screenshot 2024-06-02 at 12 18 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0c6a0081-68ba-4e28-b43d-e3575fd7f871">| Trigger further processing or other workflows via a webhook. | Automates the initiation of subsequent workflows, enhancing process efficiency.|
+| 9   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 34 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/34128afe-8a31-41dd-be06-74a8f7529644">| Notify the HR department if timesheets are defective | Ensures HR is aware of the defective of timesheet which require further processing.|
+| 10  | <img width="77" alt="Screenshot 2024-06-02 at 12 18 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0c6a0081-68ba-4e28-b43d-e3575fd7f871">| Error Indicating timesheet validation failure. | ensures the validation failure is captured to further notify the HR department.|
 
 
 **Project Manager**
 
 | Row | Picture | Description | Comment |
 | --- | ------- | ----------- | ------- |
-| 1 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 33 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0092c3ff-f1da-4669-af3f-39c92d6e8756"> |  Checks current task allocations of an employee to ensure proper task assignment. | Ensures tasks are appropriately allocated before timesheet approval. |
+| 1 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 33 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0092c3ff-f1da-4669-af3f-39c92d6e8756"> |  Checks if employees are allocated to a project | Ensures employees are appropriately allocated before timesheet approval. |
 | 2 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 41 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e5582196-0691-4861-810a-da0068297e91">| Decision node to confirm if the employee is allocated to tasks. | Critical checkpoint to proceed with timesheet processing. |
 | 3 | <img width="85" alt="Screenshot 2024-06-02 at 12 34 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d4891224-fde6-442e-be6e-a472e4e50ea3">| **No**: Path taken if the employee has no current allocations. | Leads to system notification for allocation issue. |
 | 4 | <img width="120" alt="Screenshot 2024-06-02 at 12 34 59 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/361031dc-e41f-4f48-b736-d8142d765234"> | **Yes**: Path taken if allocations are confirmed. | Proceeds to timesheet approval. |
