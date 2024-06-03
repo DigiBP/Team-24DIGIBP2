@@ -1,6 +1,7 @@
 # Team-24DIGIBP2
 
 
+![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2297de94-eb98-4f5a-a106-f41f7337caea)
 
 
 
