@@ -1,0 +1,824 @@
+{
+    "name": "1.1 Create timesheet from template",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 539149,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "hook": {
+                            "data": {
+                                "editable": "true"
+                            },
+                            "label": "Create Timesheet"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook:gateway-webhook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "google-sheets:createASpreadsheetFromATemplate",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1763405
+            },
+            "mapper": {
+                "from": "drive",
+                "name": "Timesheet - {{1.employeeName}}",
+                "select": "list",
+                "values": {
+                    "168783982": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "497255497": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "973727575": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "1026777676": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "1112323533": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "1115520754": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "1204280040": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "1265796524": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "1465049606": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "1848157717": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "2017714931": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    },
+                    "2111102569": {
+                        "name": "{{1.employeeName}}",
+                        "title": "{{1.jobTitle}}",
+                        "projectId": "{{1.projectId}}"
+                    }
+                },
+                "folderId": "/17sg0Fc6ST-IMrG9GYlVe-FeVi_T1eJpM",
+                "destination": "drive",
+                "spreadsheetId": "/1srzhIzL5OrTutdDkk44EASKkK3PLzRCTfC6k1F58Ej8"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "select": {
+                            "label": "Select from the list"
+                        },
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "Timesheets"
+                            ]
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "Timesheet-template-excel-2024_EN"
+                            ],
+                            "nested": [
+                                {
+                                    "name": "values",
+                                    "spec": [
+                                        {
+                                            "name": "1112323533",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "January"
+                                        },
+                                        {
+                                            "name": "1848157717",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "February"
+                                        },
+                                        {
+                                            "name": "1026777676",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "March"
+                                        },
+                                        {
+                                            "name": "1204280040",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "April"
+                                        },
+                                        {
+                                            "name": "1265796524",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "May"
+                                        },
+                                        {
+                                            "name": "2111102569",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "June"
+                                        },
+                                        {
+                                            "name": "168783982",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "July"
+                                        },
+                                        {
+                                            "name": "497255497",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "August"
+                                        },
+                                        {
+                                            "name": "2017714931",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "September"
+                                        },
+                                        {
+                                            "name": "1115520754",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "October"
+                                        },
+                                        {
+                                            "name": "1465049606",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "November"
+                                        },
+                                        {
+                                            "name": "973727575",
+                                            "spec": [
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "name"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": "title"
+                                                },
+                                                {
+                                                    "name": "projectId",
+                                                    "type": "text",
+                                                    "label": "projectId"
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "December"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Values"
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection (smartinvoicedigibpm@gmail.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Enter a Template Spreadsheet ID",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "fromAll",
+                                "list"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Title",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "New Drive Location",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Template Spreadsheet ID",
+                        "required": true
+                    },
+                    {
+                        "name": "values",
+                        "spec": [
+                            {
+                                "name": "1112323533",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "January"
+                            },
+                            {
+                                "name": "1848157717",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "February"
+                            },
+                            {
+                                "name": "1026777676",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "March"
+                            },
+                            {
+                                "name": "1204280040",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "April"
+                            },
+                            {
+                                "name": "1265796524",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "May"
+                            },
+                            {
+                                "name": "2111102569",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "June"
+                            },
+                            {
+                                "name": "168783982",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "July"
+                            },
+                            {
+                                "name": "497255497",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "August"
+                            },
+                            {
+                                "name": "2017714931",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "September"
+                            },
+                            {
+                                "name": "1115520754",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "October"
+                            },
+                            {
+                                "name": "1465049606",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "November"
+                            },
+                            {
+                                "name": "973727575",
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "projectId",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "December"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Values"
+                    },
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "New Document's Location",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "gateway:WebhookRespond",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "body": "Success",
+                "status": "200",
+                "headers": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "headers": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "status",
+                        "type": "uinteger",
+                        "label": "Status",
+                        "required": true,
+                        "validate": {
+                            "min": 100
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key",
+                                "required": true,
+                                "validate": {
+                                    "max": 256
+                                }
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value",
+                                "required": true,
+                                "validate": {
+                                    "max": 4096
+                                }
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Custom headers",
+                        "validate": {
+                            "maxItems": 16
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}
