@@ -157,17 +157,17 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 | Row | Picture                                    | Description                                  | Comment                                     |
 |-----|--------------------------------------------|----------------------------------------------|---------------------------------------------|
-| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> | Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
-| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | Employee fills out the timesheet.            | This step involves the actual input of work hours or details into the system. |
+| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> |UserTask: Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
+| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | ServiceTask: Time Sheet created by Template            | This step involves the system creating a timesheet. |
 
 
  **HR Department**
  
 | Row | Picture | Description | Comment |
 | --- | ------- | ----------- | ------- |
-| 1   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 39 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/43d68d10-13f1-48ad-8216-fbcea6f3549d">| Initiate loading of timesheets at the end of each month for processing. | Critical for ensuring all timesheets are accounted for before processing begins.|
-| 2   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 46 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9639c1ac-fa1c-43ad-8250-e28b39e88cd7"> | Retrieve customer information associated with the timesheets. |Helps in linking timesheets to respective customers for billing|
-| 3   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c336adec-c3f5-4bd4-8ab1-19a616a572fb"> | Determine whether the timesheet entries are billable. | Essential for financial processing and determining revenue from billable hours. |
+| 1   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 39 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/43d68d10-13f1-48ad-8216-fbcea6f3549d">| Initiate loading of timesheets at the begining of each month for processing. | Critical for ensuring all timesheets are accounted for before processing begins.|
+| 2   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 46 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9639c1ac-fa1c-43ad-8250-e28b39e88cd7"> | Retrieve customer information associated with the project. |Helps in linking timesheets to respective customers for billing|
+| 3   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c336adec-c3f5-4bd4-8ab1-19a616a572fb"> |DMN to Determine whether the timesheet entries are billable. | Essential for financial processing and determining revenue from billable hours. |
 | 4   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a1a85f97-bc9c-4365-a9bc-cde23fc20d14">| Decision point to check if the timesheets are billable. |  Decision-making step that influences downstream processing.  |
 | 5   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2291792a-e91d-4180-aaaf-57e5c1b68b88">| Path followed if timesheets are billable. | Leads to further actions for billable entries, such as notifying accounts.|
 | 6   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/20d5dd01-755d-41e2-991e-54e9dc1b5a46">| Path followed if timesheets are not billable. |Routes the non-billable timesheets to appropriate handling procedures.  |
