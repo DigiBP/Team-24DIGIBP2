@@ -47,7 +47,7 @@ At Nish the existing payroll and timesheet management processes are predominantl
 
 
 
-# The following process is combination of both the Timesheet process and the Invoice generation process
+# Current AS-IS for Timesheet process and the Invoice generation process
 
 The Timesheet Process is triggered by 2 events done by the Project worker.
 
