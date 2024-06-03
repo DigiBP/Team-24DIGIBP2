@@ -24,7 +24,7 @@ This document describes the contribution to the process from Nish's Company As p
 
 # Description of the Use Case
 
-In the digital age, paper-based systems prove to be cumbersome, error-prone, and time-intensive. For our project, we are inspired by Nish Technologies which was founded sometime in 2023 as people consulting company to provide services to its customers.. Nish essentially functions as a solution provider for HR-related challenges, offering digital tools and platforms designed to improve the efficiency and accuracy of tasks traditionally handled by human resources departments.it is on currently on the brink of digital transformation as This company's current reliance on manual, paper-based processes for HR management makes it an ideal scenario for our digital solution.
+In the digital age, paper-based systems prove to be cumbersome, error-prone, and time-intensive. For our project, we are inspired by Nish Technologies which was founded sometime in 2023 as people consulting company to provide services to its customers.. Nish essentially deals with payroll processing for its employees and timesheet and invoicing for its customers, acting as a middle person for both.it is on currently on the brink of digital transformation as This company's current reliance on manual, paper-based processes for HR management makes it an ideal scenario for our digital solution.
 
 One of the tasks that required attention was the generation of invoices created through the timesheets. The timesheets needed to be Created, Compiled, Checked and Reviewed which would then present information relevant to create the Invoices necessary so project expenses could be delivered to relevant project owners.
 
