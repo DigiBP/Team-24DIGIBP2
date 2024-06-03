@@ -1,0 +1,81 @@
+{
+  "components": [
+    {
+      "label": "Employee Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0o3oz3a",
+        "columns": null
+      },
+      "id": "Field_0ia5jh8",
+      "key": "employeeName"
+    },
+    {
+      "label": "Title",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0q3pk4a",
+        "columns": null
+      },
+      "id": "Field_16ry6u9",
+      "key": "jobTitle"
+    },
+    {
+      "values": [
+        {
+          "label": "ProjectName1",
+          "value": "P001"
+        },
+        {
+          "label": "ProjectName2",
+          "value": "P002"
+        },
+        {
+          "label": "ProjectName3",
+          "value": "P003"
+        },
+        {
+          "label": "ProjectName4",
+          "value": "P004"
+        },
+        {
+          "label": "ProjectName5",
+          "value": "P005"
+        },
+        {
+          "label": "ProjectName6",
+          "value": "P006"
+        },
+        {
+          "label": "ProjectName7",
+          "value": "P007"
+        },
+        {
+          "label": "ProjectName8",
+          "value": "P008"
+        },
+        {
+          "label": "ProjectName9",
+          "value": "P009"
+        }
+      ],
+      "label": "Project Id",
+      "type": "select",
+      "layout": {
+        "row": "Row_1mwzy8k",
+        "columns": null
+      },
+      "id": "Field_15jpxgm",
+      "key": "projectId"
+    }
+  ],
+  "type": "default",
+  "id": "FormTimesheet",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 15
+}

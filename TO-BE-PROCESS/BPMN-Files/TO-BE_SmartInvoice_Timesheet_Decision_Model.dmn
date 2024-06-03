@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_03da4dx" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
+  <decision id="decision_billable" name="isBillable">
+    <informationRequirement id="InformationRequirement_18m23gh">
+      <requiredInput href="#internal" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0zf7wor">
+      <requiredDecision href="#decision_project" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0e875r6" hitPolicy="FIRST">
+      <input id="Input_1" label="isBillableProject" biodi:width="192" camunda:inputVariable="decision_project">
+        <inputExpression id="InputExpression_1" typeRef="boolean">
+          <text>isBillableProject</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1md96i1" label="isInternalCustomer" biodi:width="192" camunda:inputVariable="internal">
+        <inputExpression id="LiteralExpression_067bkmx" typeRef="boolean">
+          <text>internal</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="billable" typeRef="boolean" />
+      <rule id="DecisionRule_079glzo">
+        <inputEntry id="UnaryTests_08xc8j7">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rkg4in">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o5wrc6">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oeen82">
+        <inputEntry id="UnaryTests_1vmx3ii">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06uibp4">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ma0cse">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sgenfr">
+        <inputEntry id="UnaryTests_1jg7jlq">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xh1l9m">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m7e1ff">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12ufv5n">
+        <inputEntry id="UnaryTests_0a4jr4w">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tiivmf">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02rcw1i">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18qo6xv">
+        <inputEntry id="UnaryTests_0ib60w1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1llgkxy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h2d565">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="decision_project" name="isBillableProject">
+    <informationRequirement id="InformationRequirement_1oufvr3">
+      <requiredInput href="#projectStatus" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0xz0i0u" hitPolicy="FIRST">
+      <input id="InputClause_00ds9i4" label="Project Status" biodi:width="192" camunda:inputVariable="projectStatus">
+        <inputExpression id="LiteralExpression_133wgka" typeRef="string">
+          <text>projectStatus</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0p9ck6r">
+          <text>"Active","InActive"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_1y96b9p" label="isBillableProject" name="isBillableProject" typeRef="boolean" />
+      <rule id="DecisionRule_0m6zij1">
+        <inputEntry id="UnaryTests_0h1l2y2">
+          <text>"Active"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1acoauf">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_119vflg">
+        <inputEntry id="UnaryTests_0myw0cg">
+          <text>"InActive"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qdfl8i">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="internal" name="isInternalCustomer" />
+  <inputData id="projectStatus" name="Project Status" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="decision_billable">
+        <dc:Bounds height="80" width="180" x="430" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1tada4j" dmnElementRef="decision_project">
+        <dc:Bounds height="80" width="180" x="150" y="250" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1pag3bq" dmnElementRef="internal">
+        <dc:Bounds height="45" width="125" x="558" y="288" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_05dgark" dmnElementRef="InformationRequirement_18m23gh">
+        <di:waypoint x="621" y="288" />
+        <di:waypoint x="550" y="200" />
+        <di:waypoint x="550" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1dowwa8" dmnElementRef="InformationRequirement_0zf7wor">
+        <di:waypoint x="240" y="250" />
+        <di:waypoint x="490" y="200" />
+        <di:waypoint x="490" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_147p7o4" dmnElementRef="projectStatus">
+        <dc:Bounds height="45" width="125" x="208" y="398" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_08s542u" dmnElementRef="InformationRequirement_1oufvr3">
+        <di:waypoint x="271" y="398" />
+        <di:waypoint x="240" y="350" />
+        <di:waypoint x="240" y="330" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
