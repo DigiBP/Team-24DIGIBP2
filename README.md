@@ -487,6 +487,10 @@ Description: Invoices are periodically loaded and reviewed to ensure they meet a
 ![image](https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/5bffb07f-22bf-4370-9715-b31ea003a0f0)
 
 
+Webhooks initiates the workflow by receiving a trigger, such as an invoice ready notification, from an external system. A custom webhook is configured to start the process upon receiving specific data. This could include details like the invoice ID, client information, or other pertinent data necessary to locate and handle the invoice document.The Google Drive Downloads the relevant invoice file from Google Drive. Once triggered, the workflow accesses Google Drive to retrieve the specified invoice file. This involves connecting to a Google Drive account, locating the file using an identifier (like a file ID or name), and downloading it for further processing.Then through Gmail
+ the downloaded invoice is sent to the client via email, the next step uses Gmail to send this file as an attachment to the client. The process involves configuring the email recipient’s address, subject line, and body content, which typically includes a polite message regarding the invoice details and any instructions for payment.
+Next Webhooks Response Completes the process by sending a response back to the initiating system. After the invoice is sent, a webhook response is generated to update the status of the process. This typically includes sending a success confirmation (like HTTP status code 200) back to the original system to signify that the invoice has been successfully sent, closing the loop on this automated task.
+
 
 
 
