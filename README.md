@@ -457,24 +457,6 @@ Description: Invoices are periodically loaded and reviewed to ensure they meet a
 
 
 
-**Step 6:** Prepare Bank Transfers and Client Communications
-
-
-
-<img width="1325" alt="Prepare Bank transfer" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/79f21ef1-1ca7-40b9-a2ef-ba6eaff4eb39">
-<img width="1325" alt="Send invoice to client" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a669758e-9dec-467d-9616-8e2cbf651a24">
-
-
-
-
-
-
-Description: Once an invoice is ready for payment, the process to prepare bank transfers is initiated, and the invoice is sent to the client. This step ensures that financial transactions are prepared accurately, and clients receive their bills in a timely manner, enhancing both cash flow management and customer satisfaction.
-
-
-
-
-
 
 
 
