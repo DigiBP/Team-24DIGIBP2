@@ -27,7 +27,7 @@
 
 # Introduction:
 
-This document describes the contribution to the process from Nish's Company As part of the course “Digitilaization of Businesss processes” At the university of applied Sciences and Arts North-western Switzerland.
+This document describes the contribution to the process from Nish's Company as part of the course “Digitilaization of Businesss processes” at the university of applied Sciences and Arts North-western Switzerland.
 
 # Description of the Use Case
 
