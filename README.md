@@ -120,8 +120,6 @@ The Invoice generation process is now taken over by the accountant and is trigge
 7.	**Scalability Issues:** The process as shown might not scale well with increasing numbers of employees or projects due to its manual and linear nature. As the company grows, the workload could become unmanageable without further automation or process optimization.
 
 
-8.	**Data Silos:** Data related to timesheets, projects, and invoices may be stored in disparate systems, leading to data silos and inefficiencies.
-
 
 
 
