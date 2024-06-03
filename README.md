@@ -28,10 +28,10 @@ In the digital age, paper-based systems prove to be cumbersome, error-prone, and
 
 One of the tasks that required attention was the generation of invoices created through the timesheets. The timesheets needed to be Created, Compiled, Checked and Reviewed which would then present information relevant to create the Invoices necessary so project expenses could be delivered to relevant project owners.
 
-Our project aims to streamline and automate the payroll processing, timesheet creation, and invoice generation. We will digitalize their existing processes through Camunda and Make which will not only simplify these processes but also enhances accuracy and accessibility.
+Our project SmartInvoice aims to streamline and automate the payroll processing, timesheet creation, and invoice generation. We will digitalize their existing processes through Camunda and Make which will not only simplify these processes but also enhances accuracy and accessibility.
 
 There is no existing process model or workflow integration at Nish. Therefore, the Group created a best effort AS-IS BPMN process with the information they received from Jan. 
-As-IS Process Description
+
 
 
 
@@ -143,6 +143,102 @@ There are 2 main processes:
 2. **Invoice Generation Process:** Deployed in Camunda as invoice_generation_to_be, this is the main process dedicated to the generation and management of invoices derived from approved timesheets and other billable activities. This process is initiated monthly or as needed, loading all relevant data to create and validate invoices. Each invoice creation corresponds to one main process instance, ensuring that each document is processed independently to maintain integrity and traceability.
 
 These two sets of processes—timesheet management and invoice generation—are designed to enhance operational efficiency at Nish Technologies. By deploying these processes in Camunda, the company ensures that each critical task within timesheet and invoice management is handled systematically, reducing errors, improving turnaround times, and enhancing overall financial and operational control.
+
+
+
+
+
+
+# Description of the TO-BE Process elements 
+
+
+
+**Invoice Generation**
+
+| Row | Picture | Description             | Comment                                              |
+|-----|---------|-------------------------|------------------------------------------------------|
+| 1   | <img width="93" alt="Screenshot 2024-06-02 at 11 23 54 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/941bb34d-8c35-4dc8-92c9-c726a0b6841f"> | Load Invoices | Invoices are loaded monthly for processing.         |
+| 2   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 04 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/94b440d5-7e3b-469f-ad23-976b1aacae82">| Validate Invoice | Each invoice is validated for accuracy and completeness. |
+| 3   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 11 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cb056e31-e19a-409c-b99e-02a4205e92f5">| Review Invoice | Invoices undergo a detailed review to ensure they meet set criteria. |
+| 4   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 53 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/471e066f-cc46-4e8a-b441-aafcb9f893e8">| Move to Error Folder | Invoices that fail the review are moved to an error folder for correction. |
+| 5   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 27 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/aefe8941-4a73-433e-99f1-7d9776e8d24d">| Prepare Bank Transfer | Bank transfers are prepared for invoices that are validated successfully. |
+| 6   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 34 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/64824990-2599-4b22-9499-b19bbfff3be9">| Send Invoice to Client | Approved invoices are sent to the client. |
+| 7   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 39 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1b0789a1-4096-4da8-a3fe-b67f34c5d3ed">| Move to Processed Folder | Successfully processed invoices are stored in the processed folder. |
+| 8   |  <img width="93" alt="Screenshot 2024-06-02 at 11 24 58 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d2d3ddb8-8892-43fb-aa2d-c93e47e10dcd"> | Update Invoice Records | The records are updated to reflect the processed invoices. |
+| 9   | <img width="93" alt="Screenshot 2024-06-02 at 11 25 02 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c58ab511-3a96-46d8-b9f8-3543e16093d2">| Notify Accounts Manager | The accounts manager is notified upon completion or issues. |
+
+
+
+
+**TIMESHEET MANAGEMENT**
+
+
+ **Employee**
+
+| Row | Picture                                    | Description                                  | Comment                                     |
+|-----|--------------------------------------------|----------------------------------------------|---------------------------------------------|
+| 1   |  <img width="71" alt="Screenshot 2024-06-02 at 12 04 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/433f8440-9de8-4261-a10b-ffcfd5cfab3c"> | Employee initiates a timesheet request.      | This is the initial action by the employee to start the timesheet process. |
+| 2   | <img width="71" alt="Screenshot 2024-06-02 at 12 04 18 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/97be5e80-5844-4eb6-b05f-f0e543641e5a"> | Employee fills out the timesheet.            | This step involves the actual input of work hours or details into the system. |
+
+
+ **HR Department**
+ 
+| Row | Picture | Description | Comment |
+| --- | ------- | ----------- | ------- |
+| 1   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 39 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/43d68d10-13f1-48ad-8216-fbcea6f3549d">| Initiate loading of timesheets at the end of each month for processing. | Critical for ensuring all timesheets are accounted for before processing begins.|
+| 2   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 46 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9639c1ac-fa1c-43ad-8250-e28b39e88cd7"> | Retrieve customer information associated with the timesheets. |Helps in linking timesheets to respective customers for billing|
+| 3   | <img width="77" alt="Screenshot 2024-06-02 at 12 15 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c336adec-c3f5-4bd4-8ab1-19a616a572fb"> | Determine whether the timesheet entries are billable. | Essential for financial processing and determining revenue from billable hours. |
+| 4   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/a1a85f97-bc9c-4365-a9bc-cde23fc20d14">| Decision point to check if the timesheets are billable. |  Decision-making step that influences downstream processing.  |
+| 5   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/2291792a-e91d-4180-aaaf-57e5c1b68b88">| Path followed if timesheets are billable. | Leads to further actions for billable entries, such as notifying accounts.|
+| 6   | <img width="63" alt="Screenshot 2024-06-02 at 12 16 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/20d5dd01-755d-41e2-991e-54e9dc1b5a46">| Path followed if timesheets are not billable. |Routes the non-billable timesheets to appropriate handling procedures.  |
+| 7   |<img width="77" alt="Screenshot 2024-06-02 at 12 16 45 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e3b39d38-bd37-4540-a4c0-cd881e899320">| Notify the accounts department about the billable timesheets. | Ensures the accounts team is updated for invoicing and revenue recording. |
+| 8   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 30 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/df6fc6dc-ed0d-4f43-95b1-1fd045ebc4b9"> | Move timesheets to processed folder based on the outcome of billing checks. | Organizes timesheets into correct folders for archiving and error checking. |
+| 9   | <img width="77" alt="Screenshot 2024-06-02 at 12 17 34 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/34128afe-8a31-41dd-be06-74a8f7529644">| Notify the HR department once timesheets are processed. | Ensures HR is aware of the completion of timesheet processing for further actions.|
+| 10  | <img width="77" alt="Screenshot 2024-06-02 at 12 18 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0c6a0081-68ba-4e28-b43d-e3575fd7f871">| Trigger further processing or other workflows via a webhook. | Automates the initiation of subsequent workflows, enhancing process efficiency.|
+
+
+**Project Manager**
+
+| Row | Picture | Description | Comment |
+| --- | ------- | ----------- | ------- |
+| 1 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 33 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/0092c3ff-f1da-4669-af3f-39c92d6e8756"> |  Checks current task allocations of an employee to ensure proper task assignment. | Ensures tasks are appropriately allocated before timesheet approval. |
+| 2 | <img width="77" alt="Screenshot 2024-06-02 at 12 34 41 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/e5582196-0691-4861-810a-da0068297e91">| Decision node to confirm if the employee is allocated to tasks. | Critical checkpoint to proceed with timesheet processing. |
+| 3 | <img width="85" alt="Screenshot 2024-06-02 at 12 34 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d4891224-fde6-442e-be6e-a472e4e50ea3">| **No**: Path taken if the employee has no current allocations. | Leads to system notification for allocation issue. |
+| 4 | <img width="120" alt="Screenshot 2024-06-02 at 12 34 59 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/361031dc-e41f-4f48-b736-d8142d765234"> | **Yes**: Path taken if allocations are confirmed. | Proceeds to timesheet approval. |
+| 5 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 09 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/05976efe-25ba-453b-8e1d-db372d8928fc">|  Decision node to check if the timesheet meets approval criteria. | Gatekeeper for further timesheet processing steps. |
+| 6 |<img width="77" alt="Screenshot 2024-06-02 at 12 57 51 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/afa4376c-5da2-4f09-884d-105a3f1e6170">|  Approves the timesheet after successful review. | Critical for proceeding to invoicing and record updates. |
+| 7 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 13 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/abedc5e4-3faa-421a-b3ea-27eeb5c1db53">|  Moves approved timesheets to the external processed folder. | Segregates processed timesheets for archival and auditing. |
+| 8 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 17 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/7e258198-ff05-4119-83b2-5b3537916aa2">|  Generates invoice records based on approved timesheets. | Integral for billing and financial documentation. |
+| 9 | <img width="77" alt="Screenshot 2024-06-02 at 12 35 22 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/501e50fc-0b45-408e-9001-701b7f249d9d">| **C**: Represents the continuation of the process towards final invoicing and client notification. | Indicates ongoing process flow. |
+
+**Line Manager**
+
+| Row | Picture | Description | Comment |
+| --- | ------- | ----------- | ------- |
+| 1   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 58 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/9d643d4e-6a49-41af-9ce5-29a19663bf9d">| Move to Processed-Timesheets(Internal) | Task to archive processed timesheets in an internal folder, ensuring organization and readiness for audits. |
+| 2   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 35 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/00466268-fa74-4d73-8d6f-5b1cc14a308e"> | Is Allocated to Internal Cost Center | Decision point to determine if expenses are allocated to an internal cost center, crucial for financial management. |
+| 3   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 28 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/704a89e9-cabb-4935-ac9a-327e13516d93">| Allocate to Internal Cost Center | Procedure to allocate expenses to the correct department's budget, aiding precise financial tracking. |
+| 4   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 23 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b940aea6-6fec-4645-9c8b-759c666efadb">| Lightning Bolt Symbol (Task Trigger) | Indicates an automated process trigger, enhancing workflow efficiency and reducing manual effort. |
+| 5   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 11 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/53ae9f32-dfab-47b9-8790-c458c5ade782">| Is Hours within Limit | Ensures that the reported hours are within the permissible range, maintaining compliance and controlling overtime. |
+| 6   | <img width="77" alt="Screenshot 2024-06-02 at 1 03 06 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/b09bbf6d-1896-453c-9164-39d8b24d1558">| Arrow with "B" | Directs to appropriate action if hours are outside the allowable range, potentially leading to further review or adjustment. |
+| 7   | <img width="77" alt="Screenshot 2024-06-02 at 1 04 03 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/25a7fda2-a55f-47cf-900d-3cfdfbe65e0e">| Arrow with "C" | Represents the direction towards subsequent tasks, maintaining the workflow's continuity and efficiency. |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Process 1: Timesheet Management Process
@@ -427,7 +523,14 @@ This TO-BE process for Invoice Generation optimizes the entire invoicing cycle, 
 
 
 
+# Conclusion
 
+The enhanced TO-BE processes for Invoice Generation and Timesheet Management at Nish Technologies exemplify significant advancements in financial and workforce management, leveraging the automation capabilities of Make and the robust modeling features of Camunda. These technologies ensure that both invoices and timesheets are processed with high accuracy and efficiency, minimizing the potential for human error and maximizing operational productivity. Make facilitates the automation of complex workflows, enabling tasks to be carried out swiftly and seamlessly. Simultaneously, Camunda's BPMN modeling provides a clear, visual framework for managing and optimizing these business processes, enhancing transparency and accountability across departments. This integration not only streamlines data handling and processing but also frees up valuable resources, allowing staff to focus on strategic growth initiatives. Overall, these improvements lead to better regulatory compliance, improved stakeholder satisfaction, and a more agile response to market demands.
+
+
+# Suggestions
+
+To further refine and enhance the processes of invoice generation and timesheet management, Nish Technologies could consider several improvements. Integration with ERP systems would offer a more unified view of operational and financial data, enhancing real-time decision-making and financial planning. The implementation of machine learning algorithms could preemptively identify anomalies, significantly improving the accuracy and efficiency of processing. Strengthening security protocols around sensitive data through advanced encryption and multi-factor authentication will safeguard against breaches and unauthorized access. Establishing continuous feedback loops with employees and clients will enable the company to promptly address any issues and adapt processes to better meet stakeholder needs. Furthermore, ongoing training programs will ensure that employees remain knowledgeable about the latest technologies and process updates, maximizing their ability to effectively leverage these tools. By embracing these suggestions, Nish Technologies will not only optimize current operations but also maintain its competitive edge in a dynamically evolving business landscape.
 
 
 
