@@ -134,9 +134,9 @@ The Invoice generation process is now taken over by the accountant and is trigge
 There are 2 main processes:
 
 
-1. **Timesheet Management Process:** Deployed in Camunda as timesheet_management_to_be, this is the primary process that manages the entire lifecycle of employee timesheets. Each employee’s timesheet corresponds to one main process instance, capturing data from timesheet creation to final approval. At the begining of each month, this main process is initiated automatically, aggregating and validating all submitted timesheets. If discrepancies are found during the validation step, an email is triggered to the HR department to notify them. This ensures that only accurate timesheets proceed to the payroll processing stage.
+1. **Timesheet Management Process:** Deployed in Camunda as timesheet_management_to_be, this is the primary process that manages the entire lifecycle of employee timesheets. Each employee’s timesheet corresponds to one main process instance, capturing data from timesheet creation to final approval. At the begining of each month, this main process is initiated automatically, aggregating and validating all submitted timesheets. If discrepancies are found during the validation step, an email is triggered to the HR department to notify them. This ensures that only accurate timesheets proceed to the Invoice processing stage.
 
-2. **Invoice Generation Process:** Deployed in Camunda as invoice_generation_to_be, this is the main process dedicated to the generation and management of invoices derived from approved timesheets and other billable activities. This process is initiated monthly or as needed, loading all relevant data to create and validate invoices. Each invoice creation corresponds to one main process instance, ensuring that each document is processed independently to maintain integrity and traceability.
+2. **Invoice Generation Process:** Deployed in Camunda as invoice_generation_to_be, this is the main process dedicated to the generation and management of invoices derived from approved timesheets activities. This process is initiated monthly, loading all relevant data to create and validate invoices. Each invoice creation corresponds to one main process instance, ensuring that each document is processed independently to maintain integrity and traceability.
 
 These two sets of processes—timesheet management and invoice generation—are designed to enhance operational efficiency at Nish Technologies. By deploying these processes in Camunda, the company ensures that each critical task within timesheet and invoice management is handled systematically, reducing errors, improving turnaround times, and enhancing overall financial and operational control.
 
@@ -146,22 +146,6 @@ These two sets of processes—timesheet management and invoice generation—are 
 
 
 # Description of the TO-BE Process elements 
-
-
-
-**Invoice Generation**
-
-| Row | Picture | Description             | Comment                                              |
-|-----|---------|-------------------------|------------------------------------------------------|
-| 1   | <img width="93" alt="Screenshot 2024-06-02 at 11 23 54 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/941bb34d-8c35-4dc8-92c9-c726a0b6841f"> | Load Invoices | Invoices are loaded monthly for processing.         |
-| 2   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 04 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/94b440d5-7e3b-469f-ad23-976b1aacae82">| Validate Invoice | Each invoice is validated for accuracy and completeness. |
-| 3   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 11 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cb056e31-e19a-409c-b99e-02a4205e92f5">| Review Invoice | Invoices undergo a detailed review to ensure they meet set criteria. |
-| 4   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 53 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/471e066f-cc46-4e8a-b441-aafcb9f893e8">| Move to Error Folder | Invoices that fail the review are moved to an error folder for correction. |
-| 5   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 27 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/aefe8941-4a73-433e-99f1-7d9776e8d24d">| Prepare Bank Transfer | Bank transfers are prepared for invoices that are validated successfully. |
-| 6   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 34 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/64824990-2599-4b22-9499-b19bbfff3be9">| Send Invoice to Client | Approved invoices are sent to the client. |
-| 7   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 39 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1b0789a1-4096-4da8-a3fe-b67f34c5d3ed">| Move to Processed Folder | Successfully processed invoices are stored in the processed folder. |
-| 8   |  <img width="93" alt="Screenshot 2024-06-02 at 11 24 58 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d2d3ddb8-8892-43fb-aa2d-c93e47e10dcd"> | Update Invoice Records | The records are updated to reflect the processed invoices. |
-| 9   | <img width="93" alt="Screenshot 2024-06-02 at 11 25 02 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c58ab511-3a96-46d8-b9f8-3543e16093d2">| Notify Accounts Manager | The accounts manager is notified upon completion or issues. |
 
 
 
@@ -220,6 +204,21 @@ These two sets of processes—timesheet management and invoice generation—are 
 | 7   | <img width="77" alt="Screenshot 2024-06-02 at 1 04 03 PM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/25a7fda2-a55f-47cf-900d-3cfdfbe65e0e">| Arrow with "C" | Represents the direction towards subsequent tasks, maintaining the workflow's continuity and efficiency. |
 
 
+
+
+
+**Invoice Generation**
+
+| Row | Picture | Description             | Comment                                              |
+|-----|---------|-------------------------|------------------------------------------------------|
+| 1   | <img width="93" alt="Screenshot 2024-06-02 at 11 23 54 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/941bb34d-8c35-4dc8-92c9-c726a0b6841f"> | Load Invoices | Invoices are loaded monthly for processing.         |
+| 2   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 04 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/94b440d5-7e3b-469f-ad23-976b1aacae82">| Validate Invoice | Each invoice is validated for accuracy and completeness. |
+| 3   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 11 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/cb056e31-e19a-409c-b99e-02a4205e92f5">| Review Invoice | Invoices undergo a detailed review to ensure they meet set criteria. |
+| 4   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 53 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/471e066f-cc46-4e8a-b441-aafcb9f893e8">| Move to Error Folder | Invoices that fail the review are moved to an error folder for correction. |
+| 6   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 34 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/64824990-2599-4b22-9499-b19bbfff3be9">| Send Invoice to Client | Approved invoices are sent to the client. |
+| 7   | <img width="93" alt="Screenshot 2024-06-02 at 11 24 39 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/1b0789a1-4096-4da8-a3fe-b67f34c5d3ed">| Move to Processed Folder | Successfully processed invoices are stored in the processed folder. |
+| 8   |  <img width="93" alt="Screenshot 2024-06-02 at 11 24 58 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/d2d3ddb8-8892-43fb-aa2d-c93e47e10dcd"> | Update Invoice Records | The records are updated to reflect the processed invoices. |
+| 9   | <img width="93" alt="Screenshot 2024-06-02 at 11 25 02 AM" src="https://github.com/DigiBP/Team-24DIGIBP2/assets/161338513/c58ab511-3a96-46d8-b9f8-3543e16093d2">| Notify Accounts Manager | The accounts manager is notified upon completion or issues. |
 
 
 
